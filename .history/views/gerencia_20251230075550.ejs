@@ -1,0 +1,47 @@
+<nav class="navbar">
+  <a href="/">Início</a>
+
+  <% if (user && user.role === 'gerencia') { %>
+    <a href="/gerencia">Gerência</a>
+  <% } %>
+
+  <% if (user && user.role === 'cpd') { %>
+    <a href="/index">CPD</a>
+  <% } %>
+
+  <a href="/cadastro">Cadastro</a>
+  <a href="/prevencao">Prevenção</a>
+  <a href="/ecommerce">Ecommerce</a>
+
+  <% if (user) { %>
+    <span>Olá, <%= user.username %></span>
+    <a href="/auth/logout">Sair</a>
+  <% } else { %>
+    <a href="/login">Login</a>
+  <% } %>
+</nav>
+    
+    <main>
+        <div class="container">
+            <div class="card">
+                <img src="imagens/atacadao.png" alt="ATACADAO" class="card-img1">
+                <a href="https://srvportal-prod.br-atacadao.corp/portal/" target="_blank"><button class="btn_atalho">Portal Atacadão</button></a>
+            </div>
+
+            <div class="card">
+                <img src="imagens/RUB2.png" alt="RUB" class="card-img2">
+                <a href="https://srvuca284/vue/" target="_blank"><button class="btn_atalho">RUB</button></a>
+            </div>
+
+            <div class="card">
+                <img src="imagens/SAVE2.png" alt="SAVEWEB" class="card-img3">
+                <a href="https://srvapp284.br-atacadao.corp/" target="_blank" ><button class="btn_atalho">SaveWeb</button></a>
+            </div>   
+
+            <div class="card">
+                <img src="imagens/LUNIX.png" alt="TPLINUX" class="card-img4">
+                <a href="https://srvtpl284.br-atacadao.corp:8080/" target="_blank"><button class="btn_atalho">TPLinux</button></a>
+            </div>
+        </div>
+
+    </main> 

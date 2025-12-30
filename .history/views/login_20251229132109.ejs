@@ -1,0 +1,3101 @@
+Pular para o conteúdo
+Você disse:
+Quero adicionar tela de login e banco de dados nas telas "Gerencia" e "CPD", para que nem todos tenham acesso a elas e seus atalhos
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="imagens/favicon.ico.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Portal Atalhos CPD 284</title>
+
+</head>
+<body>
+<header class="header">
+    <div class="header-conteudo">
+
+        <div class="header-texto">
+            <h1 class="titulo-principal">CPD 284 - Atacadão</h1>
+            <p>Todos os links internos que você precisa em um só lugar!</p>
+        </div>
+
+        <div class="header-imagem">
+            <img src="imagens/logoataca.jpg" alt="Atacadão">
+        </div>
+
+    </div>
+</header>
+
+<nav class="navbar">
+    <button class="menu-toggle" aria-label="Abrir menu">☰</button>
+
+    <div class="menu">
+        <a href="index.html">Início</a>
+        <a href="gerencia.html">Gerência</a>
+        <a href="cpd.html">CPD</a>
+        <a href="frentecaixa.html">Frente de Caixa</a>
+        <a href="cadastro.html">Cadastro</a>
+        <a href="prevencao.html">Prevenção e Perdas</a>
+        <a href="ecommerce.html">Ecommerce</a>
+    </div>
+</nav>
+    
+    <main>
+        <div class="container">
+            <div class="card">
+                <img src="imagens/atacadao.png" alt="ATACADAO" class="card-img1">
+                <a href="https://srvportal-prod.br-atacadao.corp/portal/" target="_blank"><button class="btn_atalho">Portal Atacadão</button></a>
+            </div>
+
+            <div class="card">
+                <img src="imagens/RUB2.png" alt="RUB" class="card-img2">
+                <a href="https://srvuca284/vue/" target="_blank"><button class="btn_atalho">RUB</button></a>
+            </div>
+
+            <div class="card">
+                <img src="imagens/SAVE2.png" alt="SAVEWEB" class="card-img3">
+                <a href="https://srvapp284.br-atacadao.corp/" target="_blank" ><button class="btn_atalho">SaveWeb</button></a>
+            </div>   
+
+            <div class="card">
+                <img src="imagens/LUNIX.png" alt="TPLINUX" class="card-img4">
+                <a href="https://srvtpl284.br-atacadao.corp:8080/" target="_blank"><button class="btn_atalho">TPLinux</button></a>
+            </div>
+        </div>
+
+    </main>
+
+<footer class="footer">
+ <p class="linha-email">
+  📧 Email:
+  <a href="mailto:cpdaxiasdosul@atacadao.com.br">
+    cpdaxiasdosul@atacadao.com.br
+  </a>
+
+  <span class="logo-animada">
+    <img src="imagens/logocpd284.png" alt="Logo CPD 284">
+  </span>
+</p>
+  <p>
+    ©Copy 2025/2026 – CPD 284 • Desenvolvido por:<a href="https://github.com/Iamjordana" target="_blank"> Jordana Medeiros</a> • Versão: 0.1
+  </p>
+</footer>
+</body>
+
+<script>
+    const toggle = document.querySelector('.menu-toggle');
+    const navbar = document.querySelector('.navbar');
+
+    toggle.addEventListener('click', () => {
+        navbar.classList.toggle('active');
+    });
+</script>
+</html>
+
+CSS: 
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&display=swap');
+
+:root {
+    --cor0: #ffe5b5;
+    --cor1: #fc891d;
+    --cor2: #d66801;
+    --cor3: #6CC24A;
+    --cor4: #2E7D32;
+    --cor5: #ffffff;
+
+    --fonte-padrao: Arial, Verdana, Helvetica, sans-serif; 
+    --fonte-titulos: 'Montserrat', sans-serif; font-weight: 800; 
+    --fonte-destaque:'Montserrat', sans-serif; font-weight: 600; letter-spacing: 0.25em;
+    
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--cor0);
+    font-family: Arial, Helvetica, sans-serif;
+    padding-bottom: 80px;
+}
+/* ================= HEADER ================= */
+
+.header {
+    background-color: #f57c00; /* laranja sólido */
+    padding: 35px 20px 30px;
+}
+
+.header-conteudo {
+    max-width: 1200px;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* TEXTO CENTRAL */
+.header-texto {
+    flex: 1;
+    text-align: center;
+}
+
+.titulo-principal {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.8rem;
+    font-weight: 800;
+
+    color: #2e7d32; /* verde */
+
+    /* Borda branca perfeita */
+    text-shadow:
+        -2px -2px 0 #ffffff,
+         2px -2px 0 #ffffff,
+        -2px  2px 0 #ffffff,
+         2px  2px 0 #ffffff,
+         0px -2px 0 #ffffff,
+         0px  2px 0 #ffffff,
+        -2px  0px 0 #ffffff,
+         2px  0px 0 #ffffff;
+
+    margin-bottom: 10px;
+}
+
+.header-texto p {
+    color: #ffffff;
+    font-size: 1.05rem;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+}
+
+/* IMAGEM À DIREITA */
+.header-imagem img {
+    width: 120px;
+    height: auto;
+    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.35));
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .header-conteudo {
+        flex-direction: column;
+    }
+
+    .header-imagem img {
+        width: 100px;
+        margin-top: 10px;
+    }
+
+    .titulo-principal {
+        font-size: 2.2rem;
+    }
+
+    .header-texto p {
+        letter-spacing: 0.15em;
+        font-size: 0.95rem;
+    }
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+    background-color: var(--cor4);
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+}
+
+.menu {
+    display: flex;
+    gap: 8px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 10px 16px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    background: white;
+    color: var(--cor4);
+}
+
+/* Ícone só no mobile */
+.menu-toggle {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 22px;
+        cursor: pointer;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .navbar.active .menu {
+        display: flex;
+    }
+}
+
+/* ================= MAIN ================= */
+
+main {    
+  background-color: white;
+
+    max-width: 900px;
+    margin: 30px auto;
+
+    padding: 30px;
+
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 12px;
+
+    /* 🔥 ESSENCIAL */
+    max-height: calc(100vh - 320px);
+    overflow-y: auto;
+    overflow-x: hidden;;
+}
+
+main::-webkit-scrollbar {
+    width: 10px;
+}
+
+main::-webkit-scrollbar-thumb {
+    background: linear-gradient(#2fa82f, #1e7a1e);
+    border-radius: 10px;
+}
+
+main::-webkit-scrollbar-track {
+    background: #f0f0f0;
+}
+ 
+.container {
+    display: grid;
+
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 40px;
+
+    justify-items: center;
+    align-items: start;
+
+    width: 100%;
+}
+
+.card {
+    width: 180px;
+    height: 220px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 15px 10px;
+}
+.card img {
+    width: 90px;
+    height: 90px;
+
+    object-fit: contain;
+
+    margin-bottom: 12px; /* 🔥 aproxima do botão */
+}
+
+.btn_atalho {
+    margin-top: 0;
+    width: 100%;
+    text-align: center;
+    margin-top: auto;
+    background: linear-gradient(135deg, #2fa82f, #1e7a1e);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 18px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn_atalho:hover {
+    background: linear-gradient(135deg, #ff9800, #f57c00);
+    transform: translateY(-2px);
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+
+  background: linear-gradient(90deg, #1e7a1e, #2fa82f);
+  color: #fff;
+
+  text-align: center;
+  font-size: 14px;
+  padding: 10px 5px;
+
+  box-shadow: 0 -3px 8px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+}
+
+.footer p {
+  margin: 4px 0;
+}
+
+.footer a {
+  color: #ffeb3b;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.linha-email {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;           /* distância entre texto e logo */
+  white-space: nowrap; /* impede quebra de linha */
+}
+
+.logo-animada { 
+    animation: respirar 4s infinite ease-in-out; 
+    width: 70px; 
+    height: 70px;
+    border-radius: 50%;
+    overflow: hidden; 
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.35); 
+} 
+.logo-animada img { 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+} /* efeito geral (vida) */
+ @keyframes respirar {
+     0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); } 
+} /* efeito de digitação (notebook) */ 
+.logo-animada:hover { 
+    animation: digitar 0.2s infinite;
+ }
+ @keyframes digitar { 
+ 0% { transform: translateX(0); } 
+ 25% { transform: translateX(-1px); } 
+ 50% { transform: translateX(1px); } 
+ 75% { transform: translateX(-1px); } 
+ 100% { transform: translateX(0); } 
+}
+O ChatGPT disse:
+Perfeito, seu layout está ótimo 👍
+Agora vamos proteger as telas “Gerência” e “CPD” de forma correta e segura, com login + banco de dados, e esconder os atalhos de quem não tiver permissão.
+
+⚠️ Importante: isso NÃO pode ser feito só com HTML/CSS/JS.
+Qualquer proteção real exige back-end (PHP, Node.js, etc.) + banco de dados.
+
+Vou te mostrar uma solução simples, prática e muito usada, usando PHP + MySQL, que funciona bem em intranet.
+
+✅ Visão geral da solução
+Tela de login (login.php)
+
+Banco de dados de usuários
+
+Sessão (login ativo)
+
+Controle de permissão (perfil)
+
+Bloqueio de acesso direto
+
+Ocultar links do menu para quem não pode acessar
+
+🗄️ 1. Banco de dados (MySQL)
+CREATE DATABASE portal_cpd;
+USE portal_cpd;
+
+CREATE TABLE usuarios (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100),
+    email VARCHAR(100) UNIQUE,
+    senha VARCHAR(255),
+    perfil ENUM('gerencia', 'cpd', 'usuario') NOT NULL
+);
+Exemplo de usuário
+Senha sempre criptografada
+
+<?php
+echo password_hash("123456", PASSWORD_DEFAULT);
+Depois salve no banco.
+
+🔐 2. Tela de login (login.php)
+<form action="auth.php" method="POST">
+    <h2>Login</h2>
+
+    <input type="email" name="email" placeholder="Email" required>
+    <input type="password" name="senha" placeholder="Senha" required>
+
+    <button type="submit">Entrar</button>
+</form>
+🔑 3. Autenticação (auth.php)
+<?php
+session_start();
+include "conexao.php";
+
+$email = $_POST['email'];
+$senha = $_POST['senha'];
+
+$sql = $pdo->prepare("SELECT * FROM usuarios WHERE email = ?");
+$sql->execute([$email]);
+$user = $sql->fetch();
+
+if ($user && password_verify($senha, $user['senha'])) {
+    $_SESSION['usuario'] = $user['nome'];
+    $_SESSION['perfil']  = $user['perfil'];
+
+    header("Location: index.php");
+} else {
+    echo "Login inválido";
+}
+🔒 4. Proteger páginas (Gerência / CPD)
+gerencia.html → vira gerencia.php
+No TOPO do arquivo:
+
+<?php
+session_start();
+
+if (!isset($_SESSION['perfil']) || $_SESSION['perfil'] != 'gerencia') {
+    header("Location: login.php");
+    exit;
+}
+?>
+cpd.html → vira cpd.php
+<?php
+session_start();
+
+if (
+    !isset($_SESSION['perfil']) || 
+    ($_SESSION['perfil'] != 'cpd' && $_SESSION['perfil'] != 'gerencia')
+) {
+    header("Location: login.php");
+    exit;
+}
+?>
+✔️ Mesmo que a pessoa digite o link direto, não entra.
+
+👀 5. Ocultar links do menu (navbar)
+No seu index.php:
+
+<?php session_start(); ?>
+Na navbar:
+
+<div class="menu">
+    <a href="index.php">Início</a>
+
+    <?php if ($_SESSION['perfil'] == 'gerencia'): ?>
+        <a href="gerencia.php">Gerência</a>
+    <?php endif; ?>
+
+    <?php if ($_SESSION['perfil'] == 'cpd' || $_SESSION['perfil'] == 'gerencia'): ?>
+        <a href="cpd.php">CPD</a>
+    <?php endif; ?>
+
+    <a href="frentecaixa.html">Frente de Caixa</a>
+</div>
+✔️ Quem não tem permissão nem vê o atalho.
+
+🚪 6. Logout
+<?php
+session_start();
+session_destroy();
+header("Location: login.php");
+🔐 O que essa solução garante
+✅ Login real
+✅ Senhas seguras
+✅ Controle por perfil
+✅ Bloqueio de acesso direto
+✅ Menu dinâmico
+✅ Funciona em intranet
+
+⚠️ O que não fazer
+❌ Proteger só com JavaScript
+❌ Usar display:none achando que é segurança
+❌ Senha sem criptografia
+❌ HTML puro para login
+
+👉 Próximo passo (se quiser)
+Posso:
+
+Criar a tela de login com o mesmo design do site
+
+Criar painel admin para cadastrar usuários
+
+Converter todo o site para PHP estruturado
+
+Fazer versão Node.js + MongoDB
+
+👉 Me diga qual tecnologia você vai usar no servidor (XAMPP? servidor interno?) que eu adapto certinho para você.
+
+Você disse:
+quero fazer com node.js
+O ChatGPT disse:
+Ótima escolha 👌
+Com Node.js você vai ter uma solução moderna, segura e profissional, perfeita para o seu portal interno.
+
+Vou te passar um passo a passo completo, mas simples, usando:
+
+Node.js
+
+Express
+
+MySQL
+
+Session (login)
+
+Controle de permissão (Gerência / CPD)
+
+Ocultar atalhos automaticamente
+
+Tudo pensado para rodar em intranet.
+
+🧱 Arquitetura que vamos usar
+/portal-cpd
+ ├─ server.js
+ ├─ db.js
+ ├─ package.json
+ ├─ /routes
+ │   ├─ auth.js
+ │   └─ pages.js
+ ├─ /middlewares
+ │   └─ auth.js
+ ├─ /views
+ │   ├─ login.ejs
+ │   ├─ index.ejs
+ │   ├─ gerencia.ejs
+ │   └─ cpd.ejs
+ └─ /public
+     ├─ css
+     ├─ imagens
+⚙️ 1. Criar o projeto
+mkdir portal-cpd
+cd portal-cpd
+npm init -y
+Instalar dependências:
+
+npm install express express-session mysql2 bcryptjs ejs
+🗄️ 2. Banco de dados (MySQL)
+CREATE DATABASE portal_cpd;
+USE portal_cpd;
+
+CREATE TABLE usuarios (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100),
+    email VARCHAR(100) UNIQUE,
+    senha VARCHAR(255),
+    perfil ENUM('gerencia','cpd','usuario') NOT NULL
+);
+🔌 3. Conexão com o banco (db.js)
+const mysql = require('mysql2/promise');
+
+const pool = mysql.createPool({
+    host: 'localhost',
+    user: 'root',
+    password: '',
+    database: 'portal_cpd'
+});
+
+module.exports = pool;
+🚀 4. Servidor principal (server.js)
+const express = require('express');
+const session = require('express-session');
+const path = require('path');
+
+const authRoutes = require('./routes/auth');
+const pageRoutes = require('./routes/pages');
+
+const app = express();
+
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
+app.use(session({
+    secret: 'cpd284-secreto',
+    resave: false,
+    saveUninitialized: false
+}));
+
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
+
+app.use(express.static('public'));
+
+app.use(authRoutes);
+app.use(pageRoutes);
+
+app.listen(3000, () => {
+    console.log('Servidor rodando em http://localhost:3000');
+});
+🔐 5. Middleware de permissão (middlewares/auth.js)
+function autenticar(req, res, next) {
+    if (!req.session.usuario) {
+        return res.redirect('/login');
+    }
+    next();
+}
+
+function apenasGerencia(req, res, next) {
+    if (req.session.perfil !== 'gerencia') {
+        return res.redirect('/login');
+    }
+    next();
+}
+
+function cpdOuGerencia(req, res, next) {
+    if (req.session.perfil !== 'cpd' && req.session.perfil !== 'gerencia') {
+        return res.redirect('/login');
+    }
+    next();
+}
+
+module.exports = { autenticar, apenasGerencia, cpdOuGerencia };
+🔑 6. Rotas de login (routes/auth.js)
+const express = require('express');
+const bcrypt = require('bcryptjs');
+const pool = require('../db');
+
+const router = express.Router();
+
+router.get('/login', (req, res) => {
+    res.render('login');
+});
+
+router.post('/login', async (req, res) => {
+    const { email, senha } = req.body;
+
+    const [rows] = await pool.query(
+        'SELECT * FROM usuarios WHERE email = ?', [email]
+    );
+
+    if (!rows.length) return res.redirect('/login');
+
+    const user = rows[0];
+    const ok = await bcrypt.compare(senha, user.senha);
+
+    if (!ok) return res.redirect('/login');
+
+    req.session.usuario = user.nome;
+    req.session.perfil = user.perfil;
+
+    res.redirect('/');
+});
+
+router.get('/logout', (req, res) => {
+    req.session.destroy(() => res.redirect('/login'));
+});
+
+module.exports = router;
+📄 7. Rotas das páginas (routes/pages.js)
+const express = require('express');
+const { autenticar, apenasGerencia, cpdOuGerencia } = require('../middlewares/auth');
+
+const router = express.Router();
+
+router.get('/', autenticar, (req, res) => {
+    res.render('index', { perfil: req.session.perfil });
+});
+
+router.get('/gerencia', apenasGerencia, (req, res) => {
+    res.render('gerencia');
+});
+
+router.get('/cpd', cpdOuGerencia, (req, res) => {
+    res.render('cpd');
+});
+
+module.exports = router;
+👀 8. Navbar dinâmica (EJS)
+No index.ejs:
+
+<div class="menu">
+    <a href="/">Início</a>
+
+    <% if (perfil === 'gerencia') { %>
+        <a href="/gerencia">Gerência</a>
+    <% } %>
+
+    <% if (perfil === 'cpd' || perfil === 'gerencia') { %>
+        <a href="/cpd">CPD</a>
+    <% } %>
+
+    <a href="/logout">Sair</a>
+</div>
+✔️ Quem não tem permissão nem vê o link
+✔️ Mesmo digitando a URL, o acesso é bloqueado
+
+🔐 9. Criar usuário (script rápido)
+const bcrypt = require('bcryptjs');
+
+bcrypt.hash('123456', 10).then(hash => {
+    console.log(hash);
+});
+Salve o hash no banco.
+
+✅ O que você ganha com isso
+✔️ Login seguro
+✔️ Sessões
+✔️ Permissões por perfil
+✔️ Menu inteligente
+✔️ Escalável
+✔️ Profissional
+
+🚀 Próximo passo (recomendo)
+Posso:
+
+Converter seu HTML atual direto para EJS
+
+Criar tela de login com o mesmo CSS
+
+Criar painel para cadastrar usuários
+
+Preparar deploy interno (PM2 / Windows Service)
+
+👉 Me diga onde isso vai rodar (XAMPP, servidor Windows, Linux, VM interna?) que eu ajusto exatamente para seu ambiente.
+
+Você disse:
+quero que fça, vou rodar no windows
+O ChatGPT disse:
+Perfeito 👍
+Vou montar tudo pronto para Windows, pensando em intranet, usando Node.js + Express + MySQL, e adaptando o seu HTML/CSS atual (quase nada muda no visual).
+
+Vou dividir em etapas práticas, você pode seguir uma a uma sem dor de cabeça.
+
+🪟 AMBIENTE NO WINDOWS (OBRIGATÓRIO)
+1️⃣ Instalar dependências no Windows
+✔️ Node.js
+Baixe e instale:
+👉 https://nodejs.org
+Escolha LTS
+Durante a instalação, marque:
+
+✅ Add to PATH
+
+Verifique:
+
+node -v
+npm -v
+✔️ MySQL (ou MariaDB)
+Você pode usar:
+
+MySQL Server
+
+ou XAMPP (mais simples)
+
+Banco rodando em:
+
+localhost:3306
+📁 2️⃣ Estrutura FINAL do projeto (Windows)
+Crie uma pasta, por exemplo:
+
+C:\portal-cpd
+Estrutura completa:
+
+portal-cpd
+ ├─ server.js
+ ├─ db.js
+ ├─ package.json
+ ├─ /routes
+ │   ├─ auth.js
+ │   └─ pages.js
+ ├─ /middlewares
+ │   └─ auth.js
+ ├─ /views
+ │   ├─ login.ejs
+ │   ├─ index.ejs
+ │   ├─ gerencia.ejs
+ │   └─ cpd.ejs
+ └─ /public
+     ├─ css
+     │   └─ style.css
+     └─ imagens
+👉 Seu CSS e imagens vão para /public sem alterar nada.
+
+⚙️ 3️⃣ Criar o projeto Node
+No Prompt de Comando ou PowerShell:
+
+cd C:\portal-cpd
+npm init -y
+Instalar pacotes:
+
+npm install express express-session mysql2 bcryptjs ejs
+🗄️ 4️⃣ Banco de dados (copiar e colar)
+CREATE DATABASE portal_cpd;
+USE portal_cpd;
+
+CREATE TABLE usuarios (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100),
+    email VARCHAR(100) UNIQUE,
+    senha VARCHAR(255),
+    perfil ENUM('gerencia','cpd','usuario') NOT NULL
+);
+Criar usuário inicial (exemplo)
+Senha: 123456
+
+No Node (rápido):
+
+node
+const bcrypt = require('bcryptjs');
+bcrypt.hash('123456', 10).then(h => console.log(h));
+Copie o hash e insira:
+
+INSERT INTO usuarios (nome,email,senha,perfil)
+VALUES ('Admin CPD','admin@cpd.com','HASH_AQUI','gerencia');
+🔌 5️⃣ Conexão com banco (db.js)
+const mysql = require('mysql2/promise');
+
+const pool = mysql.createPool({
+    host: 'localhost',
+    user: 'root',
+    password: '',
+    database: 'portal_cpd'
+});
+
+module.exports = pool;
+🚀 6️⃣ Servidor (server.js)
+const express = require('express');
+const session = require('express-session');
+const path = require('path');
+
+const authRoutes = require('./routes/auth');
+const pageRoutes = require('./routes/pages');
+
+const app = express();
+
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
+app.use(session({
+    secret: 'cpd284-secreto',
+    resave: false,
+    saveUninitialized: false
+}));
+
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
+
+app.use(express.static(path.join(__dirname, 'public')));
+
+app.use(authRoutes);
+app.use(pageRoutes);
+
+app.listen(3000, () => {
+    console.log('Rodando em http://localhost:3000');
+});
+🔐 7️⃣ Middleware de segurança
+/middlewares/auth.js
+
+function autenticar(req, res, next) {
+    if (!req.session.usuario) {
+        return res.redirect('/login');
+    }
+    next();
+}
+
+function apenasGerencia(req, res, next) {
+    if (req.session.perfil !== 'gerencia') {
+        return res.redirect('/login');
+    }
+    next();
+}
+
+function cpdOuGerencia(req, res, next) {
+    if (!['cpd','gerencia'].includes(req.session.perfil)) {
+        return res.redirect('/login');
+    }
+    next();
+}
+
+module.exports = { autenticar, apenasGerencia, cpdOuGerencia };
+🔑 8️⃣ Login (routes/auth.js)
+const express = require('express');
+const bcrypt = require('bcryptjs');
+const pool = require('../db');
+
+const router = express.Router();
+
+router.get('/login', (req, res) => {
+    res.render('login');
+});
+
+router.post('/login', async (req, res) => {
+    const { email, senha } = req.body;
+
+    const [users] = await pool.query(
+        'SELECT * FROM usuarios WHERE email = ?', [email]
+    );
+
+    if (!users.length) return res.redirect('/login');
+
+    const user = users[0];
+    const ok = await bcrypt.compare(senha, user.senha);
+
+    if (!ok) return res.redirect('/login');
+
+    req.session.usuario = user.nome;
+    req.session.perfil = user.perfil;
+
+    res.redirect('/');
+});
+
+router.get('/logout', (req, res) => {
+    req.session.destroy(() => res.redirect('/login'));
+});
+
+module.exports = router;
+📄 9️⃣ Rotas protegidas (routes/pages.js)
+const express = require('express');
+const { autenticar, apenasGerencia, cpdOuGerencia } = require('../middlewares/auth');
+
+const router = express.Router();
+
+router.get('/', autenticar, (req, res) => {
+    res.render('index', { perfil: req.session.perfil });
+});
+
+router.get('/gerencia', apenasGerencia, (req, res) => {
+    res.render('gerencia');
+});
+
+router.get('/cpd', cpdOuGerencia, (req, res) => {
+    res.render('cpd');
+});
+
+module.exports = router;
+🎨 1️⃣0️⃣ Converter seu HTML para EJS
+Exemplo: index.ejs
+👉 é o SEU HTML, só muda navbar
+
+<div class="menu">
+    <a href="/">Início</a>
+
+    <% if (perfil === 'gerencia') { %>
+        <a href="/gerencia">Gerência</a>
+    <% } %>
+
+    <% if (perfil === 'cpd' || perfil === 'gerencia') { %>
+        <a href="/cpd">CPD</a>
+    <% } %>
+
+    <a href="/logout">Sair</a>
+</div>
+O resto fica idêntico ao seu código atual.
+
+▶️ 1️⃣1️⃣ Rodar no Windows
+node server.js
+Acesse:
+
+http://localhost:3000
+✔️ Sem login → não entra
+✔️ Link direto → bloqueado
+✔️ Menu some automaticamente
+
+🚀 PRÓXIMOS MELHORAMENTOS (opcional)
+Posso fazer:
+
+Tela de login com seu CSS
+
+Cadastro de usuários (painel Gerência)
+
+Logs de acesso
+
+Rodar como serviço do Windows
+
+Deploy em IP interno (ex: http://10.0.0.50:3000)
+
+👉 Me diga agora:
+quer que eu converta TODO o seu index.html para index.ejs já com o CSS aplicado?
+
+Você disse:
+onde eu começo a fazer isso? direto no nodejs ou no vscode
+O ChatGPT disse:
+Excelente pergunta — isso evita muita dor de cabeça 👌
+A resposta curta é:
+
+✅ VOCÊ FAZ TUDO NO VS Code
+❌ Node.js não é um programa para “programar dentro”
+
+Vou te explicar exatamente como começar, passo a passo, no Windows, do jeito certo.
+
+🧠 Entendendo os papéis (bem rápido)
+🔹 Node.js
+É o motor que executa o JavaScript no servidor
+
+Você instala uma vez
+
+Não tem interface gráfica
+
+🔹 VS Code
+É onde você:
+
+cria pastas
+
+escreve código
+
+organiza arquivos
+
+É o ambiente de trabalho
+
+👉 Você escreve tudo no VS Code
+👉 Você roda o Node pelo terminal (dentro do VS Code ou fora)
+
+✅ COMO COMEÇAR DO ZERO (SEM ERRO)
+1️⃣ Abra o VS Code
+Arquivo → Abrir Pasta
+
+Crie e abra:
+
+C:\portal-cpd
+2️⃣ Abra o terminal dentro do VS Code
+No menu:
+
+Terminal → Novo Terminal
+Você verá algo assim:
+
+PS C:\portal-cpd>
+👉 É AQUI que você vai rodar os comandos do Node.
+
+3️⃣ Inicie o projeto Node (UMA VEZ)
+No terminal do VS Code:
+
+npm init -y
+Isso cria:
+
+package.json
+4️⃣ Instale as dependências
+Ainda no terminal:
+
+npm install express express-session mysql2 bcryptjs ejs
+Isso cria:
+
+node_modules/
+package-lock.json
+📁 5️⃣ Crie a estrutura no VS Code
+No Explorer (lado esquerdo), crie:
+
+portal-cpd
+ ├─ server.js
+ ├─ db.js
+ ├─ /routes
+ │   ├─ auth.js
+ │   └─ pages.js
+ ├─ /middlewares
+ │   └─ auth.js
+ ├─ /views
+ │   ├─ login.ejs
+ │   ├─ index.ejs
+ │   ├─ gerencia.ejs
+ │   └─ cpd.ejs
+ └─ /public
+     ├─ css
+     │   └─ style.css
+     └─ imagens
+👉 Tudo isso você cria no VS Code (botão direito → Novo arquivo / Nova pasta)
+
+✍️ 6️⃣ Onde você escreve cada coisa
+O quê	Onde
+HTML (seu site)	views/*.ejs
+CSS	public/css/style.css
+Imagens	public/imagens/
+Regras de login	middlewares/auth.js
+Rotas	routes/*.js
+Servidor	server.js
+Banco	db.js
+▶️ 7️⃣ Rodar o projeto
+No terminal do VS Code:
+
+node server.js
+Se aparecer:
+
+Rodando em http://localhost:3000
+✅ deu certo
+
+🔁 8️⃣ Fluxo do dia a dia (IMPORTANTE)
+Sempre será assim:
+
+Abre o VS Code
+
+Abre a pasta portal-cpd
+
+Terminal → node server.js
+
+Edita código
+
+Atualiza o navegador
+
+👉 Não precisa abrir Node separado
+👉 Não precisa Apache
+👉 Não precisa XAMPP (só MySQL)
+
+🚨 Erros comuns (evite)
+❌ Criar arquivos fora da pasta do projeto
+❌ Rodar node dentro de outra pasta
+❌ Editar HTML fora de views
+❌ Colocar CSS fora de public
+
+🎯 Próximo passo (bem prático)
+👉 Agora mesmo, faça isso:
+
+Abra o VS Code
+
+Crie a pasta portal-cpd
+
+Rode:
+
+npm init -y
+npm install express
+Quando terminar, me diga:
+
+✔️ se apareceu o package.json
+
+✔️ se o terminal não deu erro
+
+A partir daí eu te guio arquivo por arquivo, sem pular etapas 👍
+
+Você disse:
+tentei criar o terminal e da isso O processo de terminal falhou ao iniciar: Windows cannot open this program because it has been prevented by a software restriction policy. For more information, open Event Viewer or contact your system Administrator.
+O ChatGPT disse:
+Perfeito você ter avisado isso — esse erro é de ambiente, não é erro seu nem do Node 👍
+Vamos resolver passo a passo, sem gambiarra.
+
+❌ O QUE ESSE ERRO SIGNIFICA (em português claro)
+“Windows cannot open this program because it has been prevented by a software restriction policy”
+
+Isso quer dizer que:
+
+O Windows bloqueou a abertura do terminal (PowerShell / CMD)
+
+Geralmente acontece em:
+
+computadores corporativos
+
+máquinas com GPO / política de segurança
+
+antivírus corporativo
+
+O VS Code está OK, mas não pode abrir shell
+
+👉 É MUITO comum em ambiente de empresa (CPD, TI, Atacadão etc.)
+
+✅ BOA NOTÍCIA
+Você AINDA CONSEGUE FAZER O PROJETO
+Só precisamos usar um caminho alternativo aprovado pelo Windows.
+
+Vou te passar 3 soluções, da mais simples para a mais corporativa.
+Você testa na ordem.
+
+🔧 SOLUÇÃO 1 — Abrir VS Code COMO ADMINISTRADOR
+Essa resolve em muitos casos.
+
+Passo a passo:
+Feche o VS Code
+
+Clique com botão direito no ícone do VS Code
+
+Executar como administrador
+
+Abra sua pasta portal-cpd
+
+Terminal → Novo Terminal
+
+👉 Se abrir → problema resolvido ✅
+👉 Se não abrir, vá para a solução 2
+
+🔧 SOLUÇÃO 2 — Usar CMD fora do VS Code (MAIS USADA EM EMPRESA)
+Mesmo que o VS Code bloqueie, o CMD padrão quase sempre funciona.
+
+Teste agora:
+Win + R
+
+Digite:
+
+cmd
+Enter
+
+Se abrir um terminal preto → ótimo ✅
+
+No CMD:
+cd C:\portal-cpd
+node -v
+npm -v
+👉 Se isso funcionar, você pode:
+
+rodar Node pelo CMD
+
+editar código no VS Code normalmente
+
+💡 Isso é 100% válido e profissional.
+
+🔧 SOLUÇÃO 3 — Usar Git Bash (FUNCIONA EM 90% DOS CASOS)
+Empresas costumam liberar Git Bash, mesmo bloqueando PowerShell.
+
+Se você já tem Git instalado:
+Clique com botão direito na pasta portal-cpd
+
+Git Bash Here
+
+Teste:
+
+node -v
+npm -v
+👉 Se funcionar → usamos Git Bash como terminal oficial.
+
+❌ O QUE NÃO ADIANTA FAZER
+❌ Reinstalar VS Code
+❌ Reinstalar Node
+❌ Mudar configuração aleatória
+❌ Desativar antivírus (não pode)
+
+O bloqueio é política de sistema, não erro técnico.
+
+🔐 REALIDADE CORPORATIVA (importante)
+Se for máquina corporativa do Atacadão:
+
+Isso é GPO
+
+Só TI pode liberar:
+
+powershell.exe
+
+cmd.exe
+
+conhost.exe
+
+💬 Se precisar falar com TI, diga:
+
+“Preciso executar Node.js localmente para desenvolvimento interno, liberando CMD ou PowerShell para minha máquina.”
+
+✅ COMO CONTINUAR O PROJETO MESMO ASSIM
+👉 Resumo prático:
+
+✍️ Código: VS Code (normal)
+
+▶️ Rodar Node: CMD ou Git Bash
+
+🧠 Servidor: Node.js
+
+🗄️ Banco: MySQL
+
+Nada muda no projeto.
+
+🎯 AGORA ME RESPONDE SÓ ISSO:
+1️⃣ O CMD (Win + R → cmd) abre?
+2️⃣ O comando abaixo funciona?
+
+node -v
+Com essa resposta eu te digo exatamente qual caminho seguir e já continuo montando o projeto com você.
+
+Você disse:
+simm
+O ChatGPT disse:
+Perfeito então 👍
+Se o CMD abre e node -v funciona, está tudo certo.
+A gente só vai rodar o Node pelo CMD e editar no VS Code.
+
+A partir de agora, siga EXATAMENTE nessa ordem.
+
+✅ PASSO 1 — Criar a pasta do projeto (CMD)
+Abra o CMD e digite:
+
+cd C:\
+mkdir portal-cpd
+cd portal-cpd
+Confirme:
+
+dir
+Você deve ver a pasta vazia.
+
+✅ PASSO 2 — Iniciar o projeto Node
+Ainda no CMD:
+
+npm init -y
+Se aparecer o arquivo:
+
+package.json
+✔️ correto
+
+✅ PASSO 3 — Instalar dependências
+npm install express express-session mysql2 bcryptjs ejs
+Espere finalizar (pode demorar 1–2 min).
+
+Se aparecer:
+
+node_modules
+package-lock.json
+✔️ perfeito
+
+✅ PASSO 4 — Abrir a pasta no VS Code
+Agora abra o VS Code normalmente.
+
+Arquivo → Abrir Pasta
+
+Selecione:
+
+C:\portal-cpd
+👉 A partir daqui você NÃO usa o terminal do VS Code.
+
+✅ PASSO 5 — Criar os arquivos (NO VS CODE)
+No painel esquerdo, crie:
+
+📄 Arquivos na raiz
+server.js
+
+db.js
+
+📁 Pastas
+routes
+middlewares
+views
+public
+Dentro delas:
+
+routes/auth.js
+routes/pages.js
+
+middlewares/auth.js
+
+views/login.ejs
+views/index.ejs
+views/gerencia.ejs
+views/cpd.ejs
+
+public/css/style.css
+public/imagens/
+✅ PASSO 6 — Colar os códigos (1 por 1)
+🔌 db.js
+const mysql = require('mysql2/promise');
+
+const pool = mysql.createPool({
+    host: 'localhost',
+    user: 'root',
+    password: '',
+    database: 'portal_cpd'
+});
+
+module.exports = pool;
+🚀 server.js
+const express = require('express');
+const session = require('express-session');
+const path = require('path');
+
+const authRoutes = require('./routes/auth');
+const pageRoutes = require('./routes/pages');
+
+const app = express();
+
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
+app.use(session({
+    secret: 'cpd284-secreto',
+    resave: false,
+    saveUninitialized: false
+}));
+
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
+
+app.use(express.static(path.join(__dirname, 'public')));
+
+app.use(authRoutes);
+app.use(pageRoutes);
+
+app.listen(3000, () => {
+    console.log('Servidor rodando em http://localhost:3000');
+});
+🔐 middlewares/auth.js
+function autenticar(req, res, next) {
+    if (!req.session.usuario) {
+        return res.redirect('/login');
+    }
+    next();
+}
+
+function apenasGerencia(req, res, next) {
+    if (req.session.perfil !== 'gerencia') {
+        return res.redirect('/login');
+    }
+    next();
+}
+
+function cpdOuGerencia(req, res, next) {
+    if (!['cpd', 'gerencia'].includes(req.session.perfil)) {
+        return res.redirect('/login');
+    }
+    next();
+}
+
+module.exports = { autenticar, apenasGerencia, cpdOuGerencia };
+🔑 routes/auth.js
+const express = require('express');
+const bcrypt = require('bcryptjs');
+const pool = require('../db');
+
+const router = express.Router();
+
+router.get('/login', (req, res) => {
+    res.render('login');
+});
+
+router.post('/login', async (req, res) => {
+    const { email, senha } = req.body;
+
+    const [users] = await pool.query(
+        'SELECT * FROM usuarios WHERE email = ?', [email]
+    );
+
+    if (!users.length) return res.redirect('/login');
+
+    const user = users[0];
+    const ok = await bcrypt.compare(senha, user.senha);
+
+    if (!ok) return res.redirect('/login');
+
+    req.session.usuario = user.nome;
+    req.session.perfil = user.perfil;
+
+    res.redirect('/');
+});
+
+router.get('/logout', (req, res) => {
+    req.session.destroy(() => res.redirect('/login'));
+});
+
+module.exports = router;
+📄 routes/pages.js
+const express = require('express');
+const { autenticar, apenasGerencia, cpdOuGerencia } = require('../middlewares/auth');
+
+const router = express.Router();
+
+router.get('/', autenticar, (req, res) => {
+    res.render('index', { perfil: req.session.perfil });
+});
+
+router.get('/gerencia', apenasGerencia, (req, res) => {
+    res.render('gerencia');
+});
+
+router.get('/cpd', cpdOuGerencia, (req, res) => {
+    res.render('cpd');
+});
+
+module.exports = router;
+▶️ PASSO 7 — Rodar o servidor (CMD)
+Volte para o CMD:
+
+cd C:\portal-cpd
+node server.js
+Se aparecer:
+
+Servidor rodando em http://localhost:3000
+🎉 ESTÁ FUNCIONANDO
+
+🚦 PRÓXIMO PASSO (IMPORTANTE)
+Agora precisamos:
+1️⃣ Criar o banco MySQL
+2️⃣ Criar login.ejs
+3️⃣ Converter seu HTML para index.ejs
+
+👉 Me diga agora:
+
+✔️ O servidor subiu sem erro?
+
+✔️ Abriu http://localhost:3000/login ou deu erro?
+
+Com essa resposta eu continuo exatamente do ponto certo, sem pular nada.
+
+Você disse:
+Como crio esta parte ?
+
+routes/auth.js
+routes/pages.js
+
+middlewares/auth.js
+
+views/login.ejs
+views/index.ejs
+views/gerencia.ejs
+views/cpd.ejs
+
+public/css/style.css
+public/imagens/ 
+O ChatGPT disse:
+Ótima pergunta — agora você chegou na parte prática de verdade 👍
+Vou te explicar como criar CADA PASTA e CADA ARQUIVO no VS Code, como se eu estivesse do seu lado.
+
+👉 Nada de código agora, só criar estrutura (depois a gente cola o conteúdo).
+
+🧩 ONDE FAZER ISSO?
+👉 Tudo no VS Code, NÃO no CMD
+
+O CMD você usa só para rodar comandos (node server.js etc.).
+
+📁 PASSO 1 — Abrir a pasta certa
+No VS Code:
+
+Arquivo → Abrir Pasta
+
+Selecione:
+
+C:\portal-cpd
+No painel esquerdo (Explorer), você deve ver:
+
+portal-cpd
+ ├─ node_modules
+ ├─ package.json
+ ├─ package-lock.json
+📁 PASSO 2 — Criar as PASTAS
+No painel esquerdo:
+
+🔹 Clique com botão direito em portal-cpd
+→ Nova Pasta
+
+Crie exatamente com estes nomes:
+
+routes
+middlewares
+views
+public
+Agora a estrutura fica:
+
+portal-cpd
+ ├─ routes
+ ├─ middlewares
+ ├─ views
+ ├─ public
+📁 PASSO 3 — Criar subpastas
+📂 Dentro de public
+Botão direito em public → Nova Pasta:
+
+css
+imagens
+Estrutura:
+
+public
+ ├─ css
+ └─ imagens
+📄 PASSO 4 — Criar os ARQUIVOS
+Agora vamos criar arquivo por arquivo.
+
+📄 1️⃣ routes/auth.js
+Botão direito em routes
+
+Novo Arquivo
+
+Nome:
+
+auth.js
+📄 2️⃣ routes/pages.js
+Botão direito em routes
+
+Novo Arquivo
+
+Nome:
+
+pages.js
+📄 3️⃣ middlewares/auth.js
+Botão direito em middlewares
+
+Novo Arquivo
+
+Nome:
+
+auth.js
+📄 4️⃣ views/login.ejs
+Botão direito em views
+
+Novo Arquivo
+
+Nome:
+
+login.ejs
+📄 5️⃣ views/index.ejs
+Botão direito em views
+
+Novo Arquivo
+
+Nome:
+
+index.ejs
+📄 6️⃣ views/gerencia.ejs
+Botão direito em views
+
+Novo Arquivo
+
+Nome:
+
+gerencia.ejs
+📄 7️⃣ views/cpd.ejs
+Botão direito em views
+
+Novo Arquivo
+
+Nome:
+
+cpd.ejs
+📄 8️⃣ public/css/style.css
+Botão direito em css
+
+Novo Arquivo
+
+Nome:
+
+style.css
+🖼️ PASSO 5 — Imagens
+Abra a pasta:
+
+C:\portal-cpd\public\imagens
+Copie suas imagens atuais (logo, favicon, etc.)
+
+Cole nessa pasta
+
+👉 Depois o site já vai achar normalmente.
+
+✅ COMO CONFERIR SE ESTÁ CERTO
+No VS Code, você deve ver:
+
+portal-cpd
+ ├─ server.js
+ ├─ db.js
+ ├─ routes
+ │   ├─ auth.js
+ │   └─ pages.js
+ ├─ middlewares
+ │   └─ auth.js
+ ├─ views
+ │   ├─ login.ejs
+ │   ├─ index.ejs
+ │   ├─ gerencia.ejs
+ │   └─ cpd.ejs
+ └─ public
+     ├─ css
+     │   └─ style.css
+     └─ imagens
+Se estiver assim → 100% correto 🎯
+
+🚀 PRÓXIMO PASSO (AGORA SIM VEM O CÓDIGO)
+👉 Me confirme só isso:
+
+✔️ Todas as pastas aparecem no VS Code?
+
+✔️ Todos os arquivos foram criados sem erro?
+
+Quando você confirmar, eu:
+1️⃣ Crio login.ejs com seu visual
+2️⃣ Converto seu HTML atual para index.ejs
+3️⃣ Testo mentalmente o fluxo inteiro com você
+
+Sem pular etapa 👍
+
+Você disse:
+npm error code SELF_SIGNED_CERT_IN_CHAIN
+npm error errno SELF_SIGNED_CERT_IN_CHAIN
+npm error request to https://registry.npmjs.org/bcryptjs failed, reason: self-signed certificate in certificate chain
+npm error A complete log of this run can be found in: C:\Users\010630602\AppData\Local\npm-cache\_logs\2025-12-29T14_34_56_278Z-debug-0.lognpm error code SELF_SIGNED_CERT_IN_CHAIN
+npm error errno SELF_SIGNED_CERT_IN_CHAIN
+npm error request to https://registry.npmjs.org/bcryptjs failed, reason: self-signed certificate in certificate chain
+npm error A complete log of this run can be found in: C:\Users\010630602\AppData\Local\npm-cache\_logs\2025-12-29T14_34_56_278Z-debug-0.log
+O ChatGPT disse:
+Perfeito — esse erro é 100% típico de ambiente corporativo (proxy / certificado interno).
+Você não fez nada errado 👍
+Vamos resolver de forma segura e prática, do jeito que TI costuma permitir.
+
+❌ O QUE ESSE ERRO SIGNIFICA
+SELF_SIGNED_CERT_IN_CHAIN
+Quer dizer que:
+
+A rede da empresa usa proxy com certificado próprio
+
+O npm não confia nesse certificado
+
+Muito comum em empresas grandes (Atacadão incluso)
+
+✅ SOLUÇÃO RECOMENDADA (FUNCIONA EM 95% DOS CASOS)
+👉 Mandar o npm não validar SSL (somente para npm)
+⚠️ Isso não quebra seu Windows, só afeta o npm.
+
+No CMD, execute:
+npm config set strict-ssl false
+Depois tente novamente:
+
+npm install express express-session mysql2 bcryptjs ejs
+✔️ Normalmente resolve na hora.
+
+🔐 SOLUÇÃO ALTERNATIVA (MAIS CORPORATIVA)
+Se a anterior não funcionar, use:
+
+npm config set registry http://registry.npmjs.org/
+E depois:
+
+npm install bcryptjs
+🧠 POR QUE ISSO É ACEITÁVEL AQUI?
+Você está em intranet
+
+Não é produção externa
+
+É ambiente controlado
+
+Prática comum em CPD corporativo
+
+Depois, se quiser, dá pra reverter.
+
+🔁 COMO VOLTAR AO PADRÃO (opcional)
+Quando terminar o projeto:
+
+npm config set strict-ssl true
+npm config delete registry
+🚨 O QUE NÃO FAZER
+❌ Não mexer em certificado do Windows
+❌ Não baixar pacote manualmente
+❌ Não usar --force sem entender
+❌ Não desinstalar Node
+
+🎯 AGORA FAÇA ISSO (IMPORTANTE)
+1️⃣ Rode:
+
+npm config set strict-ssl false
+2️⃣ Rode:
+
+npm install bcryptjs
+3️⃣ Se funcionar, instale o resto:
+
+npm install express express-session mysql2 ejs
+👉 Me diga exatamente qual comando passou e qual ainda falha, que eu ajusto na mesma hora para seu ambiente corporativo.
+
+Você disse:
+onde faço o passo 6?
+O ChatGPT disse:
+Ótima pergunta — você está no caminho certo, só faltou localizar ONDE fazer 👍
+O PASSO 6 (colar os códigos) é feito no VS Code, não no CMD.
+
+Vou te mostrar exatamente onde clicar e o que colar, arquivo por arquivo.
+
+📍 RESUMO RÁPIDO
+🧑‍💻 VS Code → criar arquivos e colar código
+
+▶️ CMD → rodar comandos (npm, node server.js)
+
+🧱 PASSO 6 — COLAR OS CÓDIGOS (NO VS CODE)
+1️⃣ Abra o VS Code
+Arquivo → Abrir Pasta
+
+Selecione:
+
+C:\portal-cpd
+No lado esquerdo (Explorer), você vê as pastas e arquivos.
+
+📄 6.1 db.js
+Clique em db.js
+
+Cole TODO o código abaixo
+
+Ctrl + S para salvar
+
+const mysql = require('mysql2/promise');
+
+const pool = mysql.createPool({
+    host: 'localhost',
+    user: 'root',
+    password: '',
+    database: 'portal_cpd'
+});
+
+module.exports = pool;
+📄 6.2 server.js
+Clique em server.js
+
+Cole tudo
+
+Salve
+
+const express = require('express');
+const session = require('express-session');
+const path = require('path');
+
+const authRoutes = require('./routes/auth');
+const pageRoutes = require('./routes/pages');
+
+const app = express();
+
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
+app.use(session({
+    secret: 'cpd284-secreto',
+    resave: false,
+    saveUninitialized: false
+}));
+
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
+
+app.use(express.static(path.join(__dirname, 'public')));
+
+app.use(authRoutes);
+app.use(pageRoutes);
+
+app.listen(3000, () => {
+    console.log('Servidor rodando em http://localhost:3000');
+});
+📄 6.3 middlewares/auth.js
+Abra middlewares/auth.js
+
+Cole
+
+Salve
+
+function autenticar(req, res, next) {
+    if (!req.session.usuario) {
+        return res.redirect('/login');
+    }
+    next();
+}
+
+function apenasGerencia(req, res, next) {
+    if (req.session.perfil !== 'gerencia') {
+        return res.redirect('/login');
+    }
+    next();
+}
+
+function cpdOuGerencia(req, res, next) {
+    if (!['cpd', 'gerencia'].includes(req.session.perfil)) {
+        return res.redirect('/login');
+    }
+    next();
+}
+
+module.exports = { autenticar, apenasGerencia, cpdOuGerencia };
+📄 6.4 routes/auth.js
+Abra routes/auth.js
+
+Cole
+
+Salve
+
+const express = require('express');
+const bcrypt = require('bcryptjs');
+const pool = require('../db');
+
+const router = express.Router();
+
+router.get('/login', (req, res) => {
+    res.render('login');
+});
+
+router.post('/login', async (req, res) => {
+    const { email, senha } = req.body;
+
+    const [users] = await pool.query(
+        'SELECT * FROM usuarios WHERE email = ?', [email]
+    );
+
+    if (!users.length) return res.redirect('/login');
+
+    const user = users[0];
+    const ok = await bcrypt.compare(senha, user.senha);
+
+    if (!ok) return res.redirect('/login');
+
+    req.session.usuario = user.nome;
+    req.session.perfil = user.perfil;
+
+    res.redirect('/');
+});
+
+router.get('/logout', (req, res) => {
+    req.session.destroy(() => res.redirect('/login'));
+});
+
+module.exports = router;
+📄 6.5 routes/pages.js
+Abra routes/pages.js
+
+Cole
+
+Salve
+
+const express = require('express');
+const { autenticar, apenasGerencia, cpdOuGerencia } = require('../middlewares/auth');
+
+const router = express.Router();
+
+router.get('/', autenticar, (req, res) => {
+    res.render('index', { perfil: req.session.perfil });
+});
+
+router.get('/gerencia', apenasGerencia, (req, res) => {
+    res.render('gerencia');
+});
+
+router.get('/cpd', cpdOuGerencia, (req, res) => {
+    res.render('cpd');
+});
+
+module.exports = router;
+📄 6.6 views/login.ejs (VERSÃO SIMPLES)
+Abra views/login.ejs
+
+Cole
+
+Salve
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Login - CPD 284</title>
+</head>
+<body>
+    <form method="POST" action="/login">
+        <h2>Login</h2>
+        <input type="email" name="email" placeholder="Email" required><br><br>
+        <input type="password" name="senha" placeholder="Senha" required><br><br>
+        <button type="submit">Entrar</button>
+    </form>
+</body>
+</html>
+📄 6.7 views/index.ejs (TESTE INICIAL)
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Portal CPD</title>
+</head>
+<body>
+    <h1>Bem-vindo!</h1>
+    <p>Perfil: <%= perfil %></p>
+
+    <a href="/gerencia">Gerência</a><br>
+    <a href="/cpd">CPD</a><br>
+    <a href="/logout">Sair</a>
+</body>
+</html>
+📄 6.8 views/gerencia.ejs
+<h1>Área da Gerência</h1>
+<a href="/">Voltar</a>
+📄 6.9 views/cpd.ejs
+<h1>Área do CPD</h1>
+<a href="/">Voltar</a>
+▶️ AGORA TESTE
+No CMD:
+
+cd C:\portal-cpd
+node server.js
+Abra no navegador:
+
+http://localhost:3000/login
+🎯 O QUE ME CONFIRMAR AGORA
+1️⃣ A página de login abriu?
+2️⃣ Apareceu algum erro no CMD?
+3️⃣ Já criou o usuário no MySQL?
+
+Com isso confirmado, no próximo passo eu aplico TODO o seu CSS atual, mantendo o visual que você já tem 👌
+
+Você disse:
+mas eu não tenho db.js e server.js
+O ChatGPT disse:
+Perfeito você avisar 👍
+Isso é normal — esses arquivos não existem ainda, VOCÊ PRECISA CRIAR eles manualmente no VS Code.
+
+Vou te mostrar bem devagar, sem pular nada.
+
+🧱 ONDE CRIAR server.js e db.js
+👉 NO VS CODE, dentro da pasta C:\portal-cpd
+
+✅ PASSO A PASSO (EXATO)
+1️⃣ Abra o VS Code
+Arquivo → Abrir Pasta
+
+Escolha:
+
+C:\portal-cpd
+Você deve ver algo como:
+
+portal-cpd
+ ├─ node_modules
+ ├─ package.json
+ ├─ package-lock.json
+📄 2️⃣ Criar server.js
+No painel esquerdo (Explorer)
+
+Clique com o botão direito em portal-cpd
+
+Clique em Novo Arquivo
+
+Digite:
+
+server.js
+Pressione Enter
+
+✔️ O arquivo aparece vazio
+
+📄 3️⃣ Criar db.js
+Ainda no Explorer
+
+Clique com botão direito em portal-cpd
+
+Novo Arquivo
+
+Nome:
+
+db.js
+✔️ Pronto — agora ele existe
+
+📌 IMPORTANTE
+server.js e db.js ficam na raiz
+
+NÃO ficam dentro de nenhuma pasta
+
+Mesma altura do package.json
+
+🧪 COMO CONFERIR
+Você deve ver isso no VS Code:
+
+portal-cpd
+ ├─ server.js
+ ├─ db.js
+ ├─ package.json
+ ├─ node_modules
+Se aparecer assim → está correto ✅
+
+✍️ AGORA FAÇA ISSO
+1️⃣ Clique em server.js
+2️⃣ Cole este conteúdo:
+
+console.log('Servidor Node funcionando');
+3️⃣ Salve (Ctrl + S)
+
+▶️ TESTE RÁPIDO (CMD)
+No CMD:
+
+cd C:\portal-cpd
+node server.js
+Se aparecer:
+
+Servidor Node funcionando
+🎉 PERFEITO — Node está executando seus arquivos
+
+🚦 PRÓXIMO PASSO
+👉 Me diga:
+
+✔️ Você conseguiu criar server.js?
+
+✔️ Rodou node server.js sem erro?
+
+Assim que você confirmar, eu te passo o conteúdo completo do server.js e db.js e seguimos sem travar 👍
+
+Você disse:
+1️⃣ A página de login abriu? Não
+2️⃣ Apareceu algum erro no CMD? Não
+3️⃣ Já criou o usuário no MySQL? não
+O ChatGPT disse:
+Perfeito — obrigado por responder certinho 👍
+Com isso deu para ver exatamente onde estamos.
+Você NÃO está com erro, só ainda não colocou o servidor completo para rodar e não criou o banco.
+
+Vamos arrumar em ordem, sem pular nada.
+
+🔎 POR QUE A PÁGINA DE LOGIN NÃO ABRIU?
+Porque agora seu server.js ainda está no teste (ou vazio), então:
+
+❌ Não existe rota /login
+
+❌ O Express não está rodando
+
+❌ O navegador não tem o que mostrar
+
+Isso é esperado 👍
+
+✅ AGORA VAMOS FAZER DO JEITO CERTO
+ETAPA 1️⃣ — COLOCAR O server.js REAL
+👉 NO VS CODE
+Abra server.js
+
+Apague tudo
+
+Cole EXATAMENTE isto
+
+Salve (Ctrl + S)
+
+const express = require('express');
+const session = require('express-session');
+const path = require('path');
+
+const authRoutes = require('./routes/auth');
+const pageRoutes = require('./routes/pages');
+
+const app = express();
+
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
+app.use(session({
+    secret: 'cpd284-secreto',
+    resave: false,
+    saveUninitialized: false
+}));
+
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
+
+app.use(express.static(path.join(__dirname, 'public')));
+
+app.use(authRoutes);
+app.use(pageRoutes);
+
+app.listen(3000, () => {
+    console.log('Servidor rodando em http://localhost:3000');
+});
+ETAPA 2️⃣ — CRIAR O BANCO (OBRIGATÓRIO)
+Sem banco → login nunca vai funcionar.
+
+Abra o MySQL (phpMyAdmin, MySQL Workbench ou MariaDB)
+Execute TUDO de uma vez:
+
+CREATE DATABASE portal_cpd;
+USE portal_cpd;
+
+CREATE TABLE usuarios (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100),
+    email VARCHAR(100) UNIQUE,
+    senha VARCHAR(255),
+    perfil ENUM('gerencia','cpd','usuario') NOT NULL
+);
+ETAPA 3️⃣ — CRIAR UM USUÁRIO (EXEMPLO)
+Gerar senha criptografada
+No CMD:
+
+node
+Depois:
+
+const bcrypt = require('bcryptjs');
+bcrypt.hash('123456', 10).then(h => console.log(h));
+Copie o hash que aparecer.
+
+Inserir no banco:
+INSERT INTO usuarios (nome,email,senha,perfil)
+VALUES ('Admin CPD','admin@cpd.com','HASH_COPIADO','gerencia');
+ETAPA 4️⃣ — CONFIRMAR ARQUIVOS ESSENCIAIS
+No VS Code, você DEVE ter:
+
+portal-cpd
+ ├─ server.js
+ ├─ db.js
+ ├─ routes
+ │   ├─ auth.js
+ │   └─ pages.js
+ ├─ middlewares
+ │   └─ auth.js
+ ├─ views
+ │   ├─ login.ejs
+ │   ├─ index.ejs
+ │   ├─ gerencia.ejs
+ │   └─ cpd.ejs
+ └─ public
+Se faltar algum → o servidor sobe mas não mostra nada.
+
+▶️ ETAPA 5️⃣ — RODAR DE NOVO
+No CMD:
+
+cd C:\portal-cpd
+node server.js
+Você PRECISA ver:
+
+Servidor rodando em http://localhost:3000
+Agora no navegador:
+
+http://localhost:3000/login
+🎯 ME RESPONDE AGORA (IMPORTANTE)
+Responda na ordem, por favor:
+
+1️⃣ O texto “Servidor rodando…” apareceu no CMD?
+2️⃣ O endereço /login abriu ou deu erro (qual)?
+3️⃣ O banco portal_cpd já existe no MySQL?
+
+Com essas 3 respostas eu ajusto exatamente o próximo passo, sem te deixar travado.
+
+Você disse:
+onde faço o segundo passo?
+O ChatGPT disse:
+Ótima pergunta — esse passo 2 não é no VS Code 👍
+Ele é feito no MySQL.
+
+Vou te mostrar todas as opções, você usa a que existir aí no seu computador.
+
+🟢 PASSO 2 — ONDE CRIAR O BANCO DE DADOS
+Você precisa de UM destes programas:
+
+OPÇÃO A️⃣ — phpMyAdmin (mais comum)
+1️⃣ Abrir
+Iniciar → procure por XAMPP ou WAMP
+
+Clique em Start no MySQL
+
+Clique em Admin (phpMyAdmin)
+
+2️⃣ Criar banco
+Clique em SQL
+
+Cole isto:
+
+CREATE DATABASE portal_cpd;
+USE portal_cpd;
+
+CREATE TABLE usuarios (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100),
+    email VARCHAR(100) UNIQUE,
+    senha VARCHAR(255),
+    perfil ENUM('gerencia','cpd','usuario') NOT NULL
+);
+Clique em Executar
+
+✔️ Banco criado.
+
+OPÇÃO B️⃣ — MySQL Workbench
+1️⃣ Abrir
+Iniciar → MySQL Workbench
+
+Conectar no servidor
+
+2️⃣ Criar banco
+Clique em New Query
+
+Cole o mesmo SQL acima
+
+Clique no ⚡ Execute
+
+OPÇÃO C️⃣ — MySQL pelo CMD (SEM INTERFACE)
+No Prompt de Comando:
+
+mysql -u root -p
+Digite a senha (se não tiver, só Enter)
+
+Depois:
+
+CREATE DATABASE portal_cpd;
+USE portal_cpd;
+
+CREATE TABLE usuarios (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100),
+    email VARCHAR(100) UNIQUE,
+    senha VARCHAR(255),
+    perfil ENUM('gerencia','cpd','usuario') NOT NULL
+);
+Digite:
+
+exit
+❗ SE VOCÊ NÃO TEM MYSQL INSTALADO
+Diga qual desses você tem:
+
+❓ XAMPP
+
+❓ WAMP
+
+❓ MySQL Workbench
+
+❓ Nenhum
+
+Que eu te guio do zero, inclusive instalação sem quebrar sua máquina corporativa.
+
+🎯 CONFIRMA PRA MIM
+Responda só isso:
+
+👉 Qual opção você tem aí? (A, B, C ou Nenhum)
+
+Assim eu continuo exatamente do ponto certo 👍
+
+Você disse:
+estou baixando o mysqla
+O ChatGPT disse:
+Perfeito 👍
+Você está no caminho certo.
+
+Enquanto o MySQL está baixando, já vou te explicar exatamente o que fazer quando terminar, sem pular nada.
+
+🟢 QUANDO O MYSQL TERMINAR DE INSTALAR (PASSO A PASSO)
+1️⃣ Durante a instalação (MUITO IMPORTANTE)
+Quando o instalador pedir:
+
+🔹 Tipo de Setup
+👉 Escolha Developer Default ou Server Only
+
+🔹 Senha do root
+👉 ANOTE ESSA SENHA
+(Exemplo: Root@123)
+
+⚠️ Se esquecer essa senha, dá dor de cabeça depois.
+
+🔹 Porta
+👉 Deixe 3306 (padrão)
+
+🔹 Final
+👉 Finish
+
+2️⃣ Abrir o MySQL Workbench
+Depois de instalado:
+
+Iniciar → MySQL Workbench
+
+Clique em:
+
+Local instance MySQL
+Digite a senha que você criou
+
+Se abrir, está tudo certo ✅
+
+3️⃣ Criar o banco e a tabela (PASSO 2 QUE VOCÊ PERGUNTOU)
+No MySQL Workbench:
+
+Clique em New SQL Tab
+
+Cole TUDO ISSO:
+
+CREATE DATABASE portal_cpd;
+USE portal_cpd;
+
+CREATE TABLE usuarios (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100),
+    email VARCHAR(100) UNIQUE,
+    senha VARCHAR(255),
+    perfil ENUM('gerencia','cpd','usuario') NOT NULL
+);
+Clique no botão ⚡ Execute
+
+Se aparecer ✔️ verde → perfeito
+
+4️⃣ Criar o primeiro usuário (ADMIN)
+Ainda no Workbench, execute:
+
+INSERT INTO usuarios (nome, email, senha, perfil)
+VALUES (
+  'Administrador',
+  'admin@cpd.com',
+  '$2a$10$123456789012345678901u',
+  'gerencia'
+);
+⚠️ A senha acima é provisória — depois vamos gerar a senha correta com Node.js.
+
+🟡 SÓ DEPOIS DISSO a gente volta pro Node.js
+Você só passa para o Node quando:
+
+✔️ MySQL abrir
+
+✔️ Banco portal_cpd existir
+
+✔️ Tabela usuarios existir
+
+🔍 ME AVISA ASSIM QUE TERMINAR
+Responda quando terminar a instalação:
+
+👉 O MySQL Workbench abriu?
+👉 Conseguiu executar o SQL sem erro?
+
+Daí eu te entrego os arquivos prontos:
+
+server.js
+
+db.js
+
+routes
+
+middlewares
+
+views
+
+login funcionando 🔐
+
+Você disse:
+Imagem carregada
+O ChatGPT disse:
+Isso é normal da instalação, pode ficar tranquilo 👍
+Essa tela não é erro.
+
+O que fazer aqui 👇
+Nessa etapa (Start Menu folder):
+
+👉 NÃO precisa mudar nada
+👉 Apenas clique em Next
+
+Ele só está perguntando em qual pasta do Menu Iniciar o MySQL vai aparecer (atalhos).
+Deixe o padrão, normalmente algo como:
+
+MySQL
+Resumo rápido
+❌ Não é erro
+
+❌ Não afeta o Node.js
+
+❌ Não afeta o banco
+
+✅ Pode clicar em Next sem medo
+
+Quando aparecer:
+
+Root Password
+
+MySQL Server
+
+Port 3306
+
+⚠️ ME AVISA, porque esses passos são importantes.
+
+Pode continuar a instalação e me diga:
+👉 Qual é a próxima tela que apareceu?
+
+Você disse:
+não pediu nada
+O ChatGPT disse:
+Perfeito — isso acontece mesmo 👍
+Seu instalador provavelmente veio no modo simples / padrão, por isso não perguntou senha agora.
+
+Vamos confirmar se o MySQL Server foi instalado corretamente e então ajustar o que falta.
+
+✅ PASSO 1 — CONFIRMAR SE O MYSQL INSTALOU
+1️⃣ Abra o MySQL Workbench
+Iniciar → procure por MySQL Workbench
+
+Abra o programa
+
+O que você deve ver:
+Um card parecido com:
+
+MySQL Connections
+Local instance MySQL
+👉 Clique nele
+
+2️⃣ Ele pediu senha?
+🔹 Se pediu senha: tente Enter (senha em branco)
+
+🔹 Se entrou direto: ótimo, senha vazia
+
+🔹 Se deu erro: me diga exatamente a mensagem
+
+❗ SE NÃO APARECER “LOCAL INSTANCE MYSQL”
+Então o Server não foi instalado, só o cliente 😬
+Mas calma, resolve fácil.
+
+Faça isso:
+Abra:
+
+MySQL Installer - Community
+Clique em Add
+
+Selecione:
+
+MySQL Server 8.x
+Next → Execute → Finish
+
+Depois volte ao Workbench.
+
+🟢 PASSO 2 — CRIAR O BANCO (ASSIM QUE ABRIR)
+Quando o Workbench abrir:
+
+Clique em New SQL Tab
+
+Cole:
+
+CREATE DATABASE portal_cpd;
+USE portal_cpd;
+
+CREATE TABLE usuarios (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100),
+    email VARCHAR(100) UNIQUE,
+    senha VARCHAR(255),
+    perfil ENUM('gerencia','cpd','usuario') NOT NULL
+);
+Clique no ⚡ Execute
+
+Se aparecer ✔️ verde → perfeito.
+
+🎯 ME RESPONDA AGORA (IMPORTANTE)
+👉 O MySQL Workbench abriu?
+👉 Apareceu “Local instance MySQL”?
+👉 Entrou sem pedir senha ou deu erro?
+
+Com isso eu já passo direto para o Node.js (server.js + db.js) sem perder tempo.
+
+Você disse:
+Imagem carregada
+.
+O ChatGPT disse:
+Perfeito 👍
+Essa tela confirma que o MySQL Server está instalado corretamente. Agora é só configurar a conexão.
+
+Vamos passo a passo, sem erro.
+
+🟢 CONFIGURAR A CONEXÃO NO MYSQL WORKBENCH
+Preencha exatamente assim:
+🔹 Connection Name
+Local MySQL
+(pode ser qualquer nome)
+
+🔹 Hostname
+127.0.0.1
+✅ já está correto
+
+🔹 Port
+3306
+✅ já está correto
+
+🔹 Username
+root
+✅ correto
+
+🔹 Password
+Clique em Store in Vault...
+
+👉 Tente:
+
+Primeiro deixe em branco e clique em OK
+
+Se pedir senha depois → digite a senha que você criou
+
+Se não lembrar, me avise que eu te ajudo a resetar
+
+🔹 Default Schema
+👉 Deixe em branco por enquanto
+
+1️⃣ Testar conexão
+Clique em Test Connection
+
+Resultados possíveis:
+✅ Connection successful → perfeito
+
+❌ Access denied → senha incorreta
+
+❌ Cannot connect → serviço parado
+
+2️⃣ Se conectar com sucesso
+Clique em OK
+
+Você vai ver a conexão na tela inicial do Workbench.
+
+👉 Clique nela
+
+🟢 PRÓXIMO PASSO (IMPORTANTE)
+Assim que entrar no MySQL:
+
+Clique em New SQL Tab
+
+Cole e execute:
+
+CREATE DATABASE portal_cpd;
+USE portal_cpd;
+
+CREATE TABLE usuarios (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100),
+    email VARCHAR(100) UNIQUE,
+    senha VARCHAR(255),
+    perfil ENUM('gerencia','cpd','usuario') NOT NULL
+);
+❗ AGORA ME CONFIRME
+Responda só isso:
+
+1️⃣ O Test Connection funcionou?
+2️⃣ Entrou no MySQL Workbench?
+3️⃣ O SQL executou sem erro?
+
+Depois disso eu te entrego:
+
+server.js
+
+db.js
+
+login funcionando 🔐
+
+proteção das páginas Gerência e CPD 🚫
+
+Você disse:
+Imagem carregada
+O ChatGPT disse:
+Perfeito, esse erro é MUITO comum e tem solução rápida 👍
+A mensagem diz exatamente o problema:
+
+Unable to connect to 127.0.0.1:3306
+👉 O MySQL Server NÃO está rodando.
+
+Vamos resolver agora.
+
+🔴 PROBLEMA
+O Workbench está instalado, mas o serviço do MySQL Server está parado ou não foi criado.
+
+🟢 SOLUÇÃO 1 (MAIS RÁPIDA) — INICIAR O SERVIÇO
+1️⃣ Abrir serviços do Windows
+Pressione Win + R
+
+Digite:
+
+services.msc
+Enter
+
+2️⃣ Procurar por:
+MySQL
+
+ou MySQL80
+
+ou MySQL Server 8.0
+
+3️⃣ O que fazer:
+Se estiver Parado → botão direito → Iniciar
+
+Se não existir → vá para a Solução 2
+
+Feche tudo e tente conectar novamente no Workbench.
+
+🟡 SOLUÇÃO 2 — SERVER NÃO FOI INSTALADO
+Se não existir nenhum serviço MySQL:
+
+1️⃣ Abra:
+MySQL Installer - Community
+2️⃣ Clique em Add
+Marque:
+
+MySQL Server 8.0.x
+3️⃣ Next → Execute → Finish
+⚠️ Quando aparecer Configurar servidor:
+
+Port: 3306
+
+Auth: Use Strong Password Encryption
+
+Root password: crie uma senha e ANOTE
+
+Depois volte ao Workbench.
+
+🟠 SOLUÇÃO 3 — FIREWALL / POLÍTICA CORPORATIVA
+Se o serviço existe e está rodando, mas não conecta:
+
+No services.msc, veja se o MySQL para sozinho
+
+Se sim → antivírus corporativo bloqueando
+
+Nesse caso, a melhor saída é:
+
+Instalar XAMPP (vem com MySQL pronto)
+
+Ou pedir liberação de porta 3306
+
+Se for ambiente corporativo (parece ser), isso é comum.
+
+✅ TESTE FINAL
+Depois de iniciar o serviço:
+
+Abra o MySQL Workbench
+
+Test Connection
+
+Se funcionar, você verá:
+
+Connection successful
+🧠 IMPORTANTE (PRA NÃO TE FRUSTRAR)
+👉 Node.js depende 100% do MySQL estar rodando
+👉 Enquanto isso não funcionar, não adianta ir pro server.js
+
+🎯 ME DIGA AGORA
+Responda com uma letra:
+
+A → Serviço MySQL existia e iniciei
+
+B → Não existia, vou instalar pelo Installer
+
+C → Existe mas para sozinho / bloqueado
+
+Com isso eu continuo no caminho certo pra você 🚀
+
+Você disse:
+não encontro Enter
+
+2️⃣ Procurar por:
+
+MySQL
+
+ou MySQL80
+
+ou MySQL Server 8.0
+
+3️⃣ O que fazer:
+
+Se estiver Parado → botão direito → Iniciar
+
+Se não existir → vá para a Solução 2
+
+Feche tudo e tente conectar novamente no Workbenc
+O ChatGPT disse:
+Perfeito, agora entendi exatamente onde você travou 👍
+Você não está errando, é só detalhe de interface do Windows.
+
+Vamos bem devagar, passo a passo, sem pular nada.
+
+🟢 COMO ABRIR A TELA CERTA (services.msc)
+1️⃣ Abrir Executar
+Pressione tecla Windows + R JUNTAS
+
+Vai abrir uma caixinha pequena chamada Executar
+
+2️⃣ Digitar o comando
+Digite EXATAMENTE:
+
+services.msc
+⚠️ Não é “Enter” da lista, é a tecla Enter do teclado ⌨️
+Depois de digitar services.msc, aperte Enter no teclado.
+
+🟢 O QUE VOCÊ DEVE VER
+Vai abrir uma janela chamada Serviços
+É uma lista grande, em ordem alfabética.
+
+Role a lista para a letra M
+
+Procure por UM destes nomes:
+
+MySQL
+
+MySQL80
+
+MySQL Server
+
+🟡 RESULTADOS POSSÍVEIS
+✅ CASO 1 — ENCONTROU MySQL / MySQL80
+Clique com o botão direito
+
+Clique em Iniciar
+
+Se iniciar:
+
+Feche tudo
+
+Abra o MySQL Workbench
+
+Clique em Test Connection
+
+❌ CASO 2 — NÃO EXISTE NADA COM MySQL
+Isso significa:
+👉 Você instalou só o Workbench
+👉 O servidor não foi instalado
+
+SOLUÇÃO
+Abrir:
+
+MySQL Installer - Community
+Clique em Add
+
+Selecione:
+
+MySQL Server 8.0.x
+Next → Execute → Finish
+
+⚠️ Se aparecer senha do root, ANOTE
+
+❌ CASO 3 — SERVIÇO EXISTE MAS NÃO INICIA
+Clique em Iniciar
+
+Se der erro → me diga a mensagem
+
+🔴 IMPORTANTE
+Sem o serviço MySQL rodando:
+
+❌ Workbench não conecta
+
+❌ Node.js não funciona
+
+❌ Login não funciona
+
+🎯 AGORA ME RESPONDA UMA COISA SÓ
+👉 Quando você abriu services.msc, apareceu algum serviço MySQL?
+
+Responda só:
+
+SIM
+
+NÃO
+
+A partir disso eu sigo exatamente o caminho certo com você 🚀
+
+Você disse:
+onde ? MySQL Installer - Community 
+O ChatGPT disse:
+Perfeito, essa é a pergunta certa 👍
+Vou te mostrar exatamente onde encontrar o MySQL Installer – Community no Windows.
+
+🟢 ONDE ABRIR O MySQL Installer – Community
+OPÇÃO 1️⃣ — Pelo Menu Iniciar (mais fácil)
+Pressione a tecla Windows
+
+Comece a digitar:
+
+MySQL Installer
+Você deve ver algo como:
+
+MySQL Installer - Community
+👉 Clique nele
+
+OPÇÃO 2️⃣ — Pela lista de programas
+Tecla Windows
+
+Role a lista até a letra M
+
+Procure uma pasta chamada MySQL
+
+Dentro dela:
+
+MySQL Installer - Community
+OPÇÃO 3️⃣ — Caminho direto (se não aparecer)
+Abra o Explorador de Arquivos e cole este caminho na barra de endereço:
+
+C:\Program Files\MySQL\MySQL Installer for Windows\
+Depois dê duplo clique em:
+
+MySQLInstaller.exe
+🟡 SE NÃO EXISTIR ESSE PROGRAMA
+Então o download foi incompleto ou bloqueado 😕
+Nesse caso, faça assim:
+
+🔽 Baixar novamente (correto)
+Acesse:
+
+https://dev.mysql.com/downloads/installer/
+Baixe:
+
+mysql-installer-community-8.x.x.msi
+Execute como Administrador
+
+🟢 ASSIM QUE ABRIR O INSTALLER
+Clique em Add
+
+Marque:
+
+MySQL Server 8.0
+Next → Execute → Finish
+
+Configure:
+
+Porta: 3306
+
+Root password: crie e ANOTE
+
+🎯 ME CONFIRMA AGORA
+👉 Você conseguiu abrir o MySQL Installer – Community?
+
+Responda:
+
+SIM, abriu
+
+NÃO, não existe
+
+Daí eu continuo exatamente no próximo passo 🚀
+
+Você disse:
+Imagem carregada
+criei o db mas ainda não abre ologin 
+O ChatGPT disse:
+Perfeito — agora ficou claro onde está o problema 👍
+E a boa notícia é: o banco NÃO é o problema.
+
+🔴 O QUE ESSE ERRO SIGNIFICA
+ERR_CONNECTION_REFUSED – localhost
+
+Isso quer dizer apenas uma coisa:
+
+👉 O servidor Node.js NÃO está rodando
+
+Ou seja:
+
+✔️ MySQL → OK (você criou o DB)
+
+❌ Node.js (server.js) → não existe ou não foi iniciado
+
+❌ Por isso o login não abre
+
+🟢 AGORA VAMOS FAZER O NODE FUNCIONAR (DO ZERO)
+📁 1️⃣ Estrutura correta do projeto
+No VS Code, crie uma pasta, por exemplo:
+
+portal-cpd
+Dentro dela, crie exatamente assim:
+
+portal-cpd
+│ server.js
+│ db.js
+│ package.json
+│
+├─ routes
+│   ├─ auth.js
+│   └─ pages.js
+│
+├─ middlewares
+│   └─ auth.js
+│
+├─ views
+│   ├─ login.ejs
+│   ├─ index.ejs
+│   ├─ gerencia.ejs
+│   └─ cpd.ejs
+│
+└─ public
+    ├─ css
+    │   └─ style.css
+    └─ imagens
+⚙️ 2️⃣ Inicializar o Node (OBRIGATÓRIO)
+Abra o VS Code
+👉 Arquivo → Abrir Pasta → portal-cpd
+
+Depois:
+
+Menu Terminal → Novo Terminal
+
+Execute:
+
+npm init -y
+Se o terminal não abrir no VS Code, use o CMD normal:
+
+cd caminho\da\pasta\portal-cpd
+npm init -y
+📦 3️⃣ Instalar dependências (versão segura p/ ambiente corporativo)
+⚠️ Como você teve erro de certificado, use assim:
+
+npm config set strict-ssl false
+npm install express express-session mysql2 ejs bcryptjs
+🧠 4️⃣ Criar o server.js (ESSENCIAL)
+Crie o arquivo server.js e cole:
+
+const express = require('express');
+const session = require('express-session');
+const path = require('path');
+
+const app = express();
+
+// Middlewares
+app.use(express.urlencoded({ extended: true }));
+app.use(express.static('public'));
+
+app.use(session({
+  secret: 'cpd284',
+  resave: false,
+  saveUninitialized: false
+}));
+
+// View engine
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
+
+// Rotas
+app.use('/', require('./routes/pages'));
+app.use('/auth', require('./routes/auth'));
+
+app.listen(3000, () => {
+  console.log('🔥 Servidor rodando em http://localhost:3000');
+});
+🔌 5️⃣ Criar o db.js
+const mysql = require('mysql2');
+
+const connection = mysql.createConnection({
+  host: 'localhost',
+  user: 'root',
+  password: '', // coloque sua senha se tiver
+  database: 'portal_cpd'
+});
+
+connection.connect(err => {
+  if (err) {
+    console.error('Erro MySQL:', err);
+  } else {
+    console.log('✅ MySQL conectado');
+  }
+});
+
+module.exports = connection;
+🧩 6️⃣ Criar rotas mínimas (pra TESTAR)
+routes/pages.js
+const express = require('express');
+const router = express.Router();
+
+router.get('/', (req, res) => {
+  res.render('login');
+});
+
+router.get('/index', (req, res) => {
+  res.render('index');
+});
+
+module.exports = router;
+views/login.ejs
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+</head>
+<body>
+  <h2>Login</h2>
+  <form action="/auth/login" method="post">
+    <input name="email" placeholder="Email">
+    <input name="senha" type="password" placeholder="Senha">
+    <button>Entrar</button>
+  </form>
+</body>
+</html>
+▶️ 7️⃣ AGORA SIM: RODAR O SERVIDOR
+No terminal, dentro da pasta do projeto:
+
+node server.js
+Você PRECISA ver no terminal:
+
+🔥 Servidor rodando em http://localhost:3000
+✅ MySQL conectado
+🌐 8️⃣ Abrir no navegador
+👉 Abra:
+
+http://localhost:3000
+Agora a página de login VAI abrir.
+
+❗ SE NÃO ABRIR, ME DIGA:
+1️⃣ O que aparece no terminal
+2️⃣ Se o comando node server.js dá erro
+3️⃣ Se o terminal abre ou não no VS Code
+
+A partir disso, eu ajusto exatamente para o seu Windows corporativo e seguimos até:
+
+🔐 login funcionando
+
+🚫 Gerência/CPD protegidos
+
+👀 atalhos escondidos por perfil
+
+
+
+
+Nenhum arquivo escolhidoNenhum arquivo escolhido
+O ChatGPT pode cometer erros. Confira informações importantes. Consulte as Preferências de cookies.

@@ -1,0 +1,149 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&display=swap');
+
+:root {
+    --cor0: #ffe5b5;
+    --cor1: #fc891d;
+    --cor2: #d66801;
+    --cor3: #6CC24A;
+    --cor4: #2E7D32;
+    --cor5: #ffffff;
+
+    --fonte-padrao: Arial, Verdana, Helvetica, sans-serif; 
+    --fonte-titulos: 'Montserrat', sans-serif; font-weight: 800; 
+    --fonte-destaque:'Montserrat', sans-serif; font-weight: 600; letter-spacing: 0.25em;
+    
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--cor0);
+    font-family: Arial, Helvetica, sans-serif;
+    padding-bottom: 80px;
+}
+/* ================= HEADER ================= */
+
+.header {
+    background-color: #f57c00; /* laranja sólido */
+    padding: 35px 20px 30px;
+}
+
+.header-conteudo {
+    max-width: 1200px;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* TEXTO CENTRAL */
+.header-texto {
+    flex: 1;
+    text-align: center;
+}
+
+.titulo-principal {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.8rem;
+    font-weight: 800;
+
+    color: #2e7d32; /* verde */
+
+    /* Borda branca perfeita */
+    text-shadow:
+        -2px -2px 0 #ffffff,
+         2px -2px 0 #ffffff,
+        -2px  2px 0 #ffffff,
+         2px  2px 0 #ffffff,
+         0px -2px 0 #ffffff,
+         0px  2px 0 #ffffff,
+        -2px  0px 0 #ffffff,
+         2px  0px 0 #ffffff;
+
+    margin-bottom: 10px;
+}
+
+.header-texto p {
+    color: #ffffff;
+    font-size: 1.05rem;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+}
+
+/* IMAGEM À DIREITA */
+.header-imagem img {
+    width: 120px;
+    height: auto;
+    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.35));
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .header-conteudo {
+        flex-direction: column;
+    }
+
+    .header-imagem img {
+        width: 100px;
+        margin-top: 10px;
+    }
+
+    .titulo-principal {
+        font-size: 2.2rem;
+    }
+
+    .header-texto p {
+        letter-spacing: 0.15em;
+        font-size: 0.95rem;
+    }
+}
+/* ================= FOOTER ================= */
+
+.footer p {
+  margin: 4px 0;
+}
+
+.footer a {
+  color: #ffeb3b;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.linha-email {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;           /* distância entre texto e logo */
+  white-space: nowrap; /* impede quebra de linha */
+}
+
+.logo-animada { 
+    animation: respirar 4s infinite ease-in-out; 
+    width: 70px; 
+    height: 70px;
+    border-radius: 50%;
+    overflow: hidden; 
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.35); 
+} 
+.logo-animada img { 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+} /* efeito geral (vida) */
+ @keyframes respirar {
+     0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); } 
+} /* efeito de digitação (notebook) */ 
+.logo-animada:hover { 
+    animation: digitar 0.2s infinite;
+ }

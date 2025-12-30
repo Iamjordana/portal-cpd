@@ -1,0 +1,430 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&display=swap');
+
+:root {
+    --cor0: #ffe5b5;
+    --cor1: #fc891d;
+    --cor2: #d66801;
+    --cor3: #6CC24A;
+    --cor4: #2E7D32;
+    --cor5: #ffffff;
+
+    --fonte-padrao: Arial, Verdana, Helvetica, sans-serif; 
+    --fonte-titulos: 'Montserrat', sans-serif; font-weight: 800; 
+    --fonte-destaque:'Montserrat', sans-serif; font-weight: 600; letter-spacing: 0.25em;
+    
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--cor0);
+    font-family: Arial, Helvetica, sans-serif;
+    padding-bottom: 80px;
+}
+/* ================= HEADER ================= */
+
+.header {
+    background-color: #f57c00; /* laranja sólido */
+    padding: 35px 20px 30px;
+}
+
+.header-conteudo {
+    max-width: 1200px;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* TEXTO CENTRAL */
+.header-texto {
+    flex: 1;
+    text-align: center;
+}
+
+.titulo-principal {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.8rem;
+    font-weight: 800;
+
+    color: #2e7d32; /* verde */
+
+    /* Borda branca perfeita */
+    text-shadow:
+        -2px -2px 0 #ffffff,
+         2px -2px 0 #ffffff,
+        -2px  2px 0 #ffffff,
+         2px  2px 0 #ffffff,
+         0px -2px 0 #ffffff,
+         0px  2px 0 #ffffff,
+        -2px  0px 0 #ffffff,
+         2px  0px 0 #ffffff;
+
+    margin-bottom: 10px;
+}
+
+.header-texto p {
+    color: #ffffff;
+    font-size: 1.05rem;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+}
+
+/* IMAGEM À DIREITA */
+.header-imagem img {
+    width: 120px;
+    height: auto;
+    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.35));
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .header-conteudo {
+        flex-direction: column;
+    }
+
+    .header-imagem img {
+        width: 100px;
+        margin-top: 10px;
+    }
+
+    .titulo-principal {
+        font-size: 2.2rem;
+    }
+
+    .header-texto p {
+        letter-spacing: 0.15em;
+        font-size: 0.95rem;
+    }
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+    background-color: var(--cor4);
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+}
+
+.menu {
+    display: flex;
+    gap: 8px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 10px 16px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    background: white;
+    color: var(--cor4);
+}
+
+/* Ícone só no mobile */
+.menu-toggle {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 22px;
+        cursor: pointer;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .navbar.active .menu {
+        display: flex;
+    }
+}
+
+/* ================= MAIN ================= */
+
+main {    
+  background-color: white;
+
+    max-width: 900px;
+    margin: 30px auto;
+
+    padding: 30px;
+
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 12px;
+
+    /* 🔥 ESSENCIAL */
+    max-height: calc(100vh - 320px);
+    overflow-y: auto;
+    overflow-x: hidden;;
+}
+
+main::-webkit-scrollbar {
+    width: 10px;
+}
+
+main::-webkit-scrollbar-thumb {
+    background: linear-gradient(#2fa82f, #1e7a1e);
+    border-radius: 10px;
+}
+
+main::-webkit-scrollbar-track {
+    background: #f0f0f0;
+}
+ 
+.container {
+    display: grid;
+
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 40px;
+
+    justify-items: center;
+    align-items: start;
+
+    width: 100%;
+}
+
+.card {
+    width: 180px;
+    height: 220px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 15px 10px;
+}
+.card img {
+    width: 90px;
+    height: 90px;
+
+    object-fit: contain;
+
+    margin-bottom: 12px; /* 🔥 aproxima do botão */
+}
+
+.btn_atalho {
+    margin-top: 0;
+    width: 100%;
+    text-align: center;
+    margin-top: auto;
+    background: linear-gradient(135deg, #2fa82f, #1e7a1e);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 18px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn_atalho:hover {
+    background: linear-gradient(135deg, #ff9800, #f57c00);
+    transform: translateY(-2px);
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+
+  background: linear-gradient(90deg, #1e7a1e, #2fa82f);
+  color: #fff;
+
+  text-align: center;
+  font-size: 14px;
+  padding: 10px 5px;
+
+  box-shadow: 0 -3px 8px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+}
+
+.footer p {
+  margin: 4px 0;
+}
+
+.footer a {
+  color: #ffeb3b;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.linha-email {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;           /* distância entre texto e logo */
+  white-space: nowrap; /* impede quebra de linha */
+}
+
+.logo-animada { 
+    animation: respirar 4s infinite ease-in-out; 
+    width: 70px; 
+    height: 70px;
+    border-radius: 50%;
+    overflow: hidden; 
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.35); 
+} 
+.logo-animada img { 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+} /* efeito geral (vida) */
+ @keyframes respirar {
+     0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); } 
+} /* efeito de digitação (notebook) */ 
+.logo-animada:hover { 
+    animation: digitar 0.2s infinite;
+ }
+
+ 
+ @keyframes digitar { 
+ 0% { transform: translateX(0); } 
+ 25% { transform: translateX(-1px); } 
+ 50% { transform: translateX(1px); } 
+ 75% { transform: translateX(-1px); } 
+ 100% { transform: translateX(0); } 
+}
+
+/* ================= LOGIN PAGE ================= */
+
+/* BODY */
+.body-login-page {
+  background-color: #f6e9c9;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* HEADER (mais baixo) */
+.header-login {
+  background-color: #ff7a00;
+  color: white;
+  padding: 16px 20px; /* 🔥 REDUZIDO */
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.titulo-principal-login {
+   font-family: 'Montserrat', sans-serif;
+    font-size: 2.8rem;
+    font-weight: 800;
+
+    color: #2e7d32; /* verde */
+
+    /* Borda branca perfeita */
+    text-shadow:
+        -2px -2px 0 #ffffff,
+         2px -2px 0 #ffffff,
+        -2px  2px 0 #ffffff,
+         2px  2px 0 #ffffff,
+         0px -2px 0 #ffffff,
+         0px  2px 0 #ffffff,
+        -2px  0px 0 #ffffff,
+         2px  0px 0 #ffffff;
+
+    margin-bottom: 10px;
+}
+
+/* IMAGEM À DIREITA */
+.header-login-imagem img {
+    width: 120px;
+    height: auto;
+    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.35));
+}
+
+.main-login {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #ffffff;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+
+  margin: 24px auto;          /* 🔥 centraliza e uniformiza */
+  width: 100%;
+  max-width: 500px;          /* 🔥 padrão de layout do site */
+
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.login-container-card {
+  background: none;
+  box-shadow: none;
+
+  width: 100%;
+  max-width: 420px;           /* 🔥 largura equilibrada */
+  padding: 36px;
+
+  text-align: center;
+}
+
+/* TÍTULO */
+.login-container-card h2 {
+  color: #2e7d32;
+  margin-bottom: 24px;
+}
+
+/* INPUTS */
+.login-container-card label {
+  display: block;
+  text-align: left;
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+.login-container-card input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 18px;
+  border: 1px solid #cfcfcf;
+  border-radius: 6px;
+}
+
+/* BOTÃO */
+.btn-entrar {
+  background-color: #2e7d32;
+  color: white;
+  padding: 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.btn-entrar:hover {
+  background-color: #256528;
+}
+

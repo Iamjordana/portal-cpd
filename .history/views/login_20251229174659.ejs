@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Login - CPD 284</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="shortcut icon" href="/public/css/imagens/favicon.ico.png" type="image/x-icon">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="topo">
+    <h1>CPD 284 - Atacadão</h1>
+    <p>Todos os links internos que você precisa em um só lugar</p>
+  </header>
+
+  <!-- LOGIN CARD -->
+  <main class="login-container">
+    <div class="login-card">
+      <h2>Login do Sistema</h2>
+
+      <<form action="/auth/login" method="POST" autocomplete="off">
+        
+        <label>Usuário</label>
+          <input
+            type="text"
+            name="login"
+            placeholder="Digite seu usuário"
+            value="<%= login || '' %>"
+            required
+          />
+
+        <label>Senha</label>
+            <input
+              type="password"
+              name="senha"
+              placeholder="Digite sua senha"
+              required
+              autocomplete="new-password"
+            />
+
+        <button type="submit">Entrar</button>
+
+        <!-- MENSAGEM DE ERRO -->
+        <% if (typeof error !== 'undefined') { %>
+          <p style="color:red; margin-top:10px; text-align:center;">
+            <%= error %>
+          </p>
+        <% } %>
+      </form>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+
+<footer class="rodape">
+  <div class="rodape-conteudo">
+    
+    <div class="rodape-texto">
+      <p>
+        📧 Email:
+        <a href="mailto:cpdaxiasdosul@atacadao.com.br">
+          <span>cpdaxiasdosul@atacadao.com.br</span>
+        </a>
+      </p>
+
+ <p class="copy">
+    ©Copy 2025/2026 – CPD 284 • Desenvolvido por:<a href="https://github.com/Iamjordana" target="_blank"> Jordana Medeiros</a> • Versão: 0.1
+  </p>
+    </div>
+
+  </div>
+</footer>

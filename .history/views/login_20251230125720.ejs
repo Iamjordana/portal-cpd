@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CAMINHO CORRETO DO CSS -->
+  <link rel="stylesheet" href="static/css/style.css">
+
+  <title>Login - CPD 284</title>
+</head>
+
+<body class="body-login-page">
+
+  <!-- CABEÇALHO -->
+  <header class="header-login">
+    <h1 class="titulo-principal-login">CPD 284 - Atacadão</h1>
+    <p>Todos os links internos que você precisa em um só lugar</p>
+  </header>
+
+  <!-- CONTEÚDO CENTRAL -->
+  <main class="main-login">
+    <div class="login-container-card">
+      <h2>Login do Sistema</h2>
+
+      <% if (typeof error !== 'undefined' && error) { %>
+        <div class="error-message"><%= error %></div>
+      <% } %>
+
+      <form action="/auth/login" method="POST">
+        <label for="login">Usuário</label>
+        <input
+          type="text"
+          id="login"
+          name="login"
+          placeholder="Digite seu usuário"
+          required
+        >
+
+        <label for="senha">Senha</label>
+        <input
+          type="password"
+          id="senha"
+          name="senha"
+          placeholder="Digite sua senha"
+          required
+        >
+
+        <label for="senha">Senha</label>
+        <input
+          type="password"
+          id="senha"
+          name="senha"
+          placeholder="Digite sua senha"
+          required
+        >
+
+        <button type="submit" class="btn-entrar">Entrar</button>
+      </form>
+    </div>
+  </main>
+
+<footer class="footer">
+  <p class="linha-email">
+    📧 Email:
+    <a href="mailto:cpdaxiasdosul@atacadao.com.br">
+      cpdaxiasdosul@atacadao.com.br
+    </a>
+
+    <span class="logo-animada">
+      <img src="static/imagens/logocpd284.png" alt="Logo CPD 284">
+    </span>
+  </p>
+
+  <p>
+    ©Copy 2025/2026 – CPD 284 • Desenvolvido por:
+    <a href="https://github.com/Iamjordana" target="_blank">Jordana Medeiros</a>
+    • Versão: 0.1
+  </p>
+</footer>
+
+<!-- JS DO MENU -->
+<script src="/js/menu.js"></script>
+</body>
+</html>
+</body>
+</html>

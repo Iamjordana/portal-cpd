@@ -1,0 +1,14 @@
+<!-- views/error.ejs -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Erro</title>
+</head>
+<body>
+  <h1>Ocorreu um erro!</h1>
+  <!-- Se a variável 'message' for passada, ela será exibida aqui -->
+  <p><%= typeof message !== 'undefined' ? message : 'Detalhes do erro desconhecidos.' %></p>
+  <a href="/">Voltar para o Início</a>
+</body>
+</html>

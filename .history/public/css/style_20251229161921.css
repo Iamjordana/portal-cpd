@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: #f5e6c8;
+}
+
+/* HEADER */
+.topo {
+  background: #f58220;
+  color: white;
+  text-align: center;
+  padding: 30px 10px;
+}
+
+.topo h1 {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.topo p {
+  margin-top: 8px;
+  letter-spacing: 2px;
+}
+
+/* LOGIN */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 220px);
+}
+
+.login-card {
+  background: white;
+  padding: 30px;
+  width: 350px;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+.login-card h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #2e7d32;
+}
+
+.login-card label {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.login-card input {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.login-card button {
+  width: 100%;
+  padding: 12px;
+  background: #2e7d32;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.login-card button:hover {
+  background: #1b5e20;
+}
+
+/* FOOTER */
+/* RODAPÉ */
+.rodape {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+
+  background: linear-gradient(90deg, #1e7a1e, #2fa82f);
+  color: #fff;
+
+  text-align: center;
+  font-size: 14px;
+  padding: 10px 5px;
+
+  box-shadow: 0 -3px 8px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+}
+
+.rodape-conteudo {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.rodape-texto p {
+  margin: 4px 0;
+  font-size: 14px;
+}
+
+.rodape-texto span {
+  color: #ffd54f;
+  font-weight: bold;
+}
+
+.rodape-texto a {
+  color: #ffeb3b;
+  text-decoration: none;
+  font-weight: bold;
+}
+.rodape-texto a:hover {
+  text-decoration: underline;
+}
+.copy {
+  font-size: 13px;
+  margin-top: 5px;
+}

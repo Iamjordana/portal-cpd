@@ -1,0 +1,22 @@
+<nav class="navbar">
+  <button class="menu-toggle" aria-label="Abrir menu">☰</button>
+
+  <div class="menu">
+    <a href="/index">Início</a>
+
+    <% if (user && user.role === 'gerencia') { %>
+      <a href="/gerencia">Gerência</a>
+    <% } %>
+
+    <% if (user && user.role === 'cpd') { %>
+      <a href="/index">CPD</a>
+    <% } %>
+
+    <% if (user) { %>
+      <div class="user-info">
+        <span>Olá, <%= user.username %></span>
+        <a href="/auth/logout" class="logout-btn">Sair</a>
+      </div>
+    <% } %>
+  </div>
+</nav>

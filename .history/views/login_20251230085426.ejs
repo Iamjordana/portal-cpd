@@ -1,0 +1,76 @@
+const express = require('express');
+const router = express.Router();
+const bcrypt = require('bcrypt');
+const db = require('../db');
+
+router.post('/login', async (req, res) => {
+  const { login, senha } = req.body;
+
+  // Validação básica
+  if (!login || !senha) {
+    return res.render('login', {
+      error: 'Preencha usuário e senha',
+      login
+    });
+  }
+
+  try {
+    // Busca o usuário no banco de dados
+    const [rows] = await db.query(
+      'SELECT * FROM users WHERE username = ?',
+      [login]
+    );
+
+    // Se o usuário não for encontrado
+    if (rows.length === 0) {
+      return res.render('login', {
+        error: 'Usuário ou senha inválidos',
+        login
+      });
+    }
+
+    const user = rows[0];
+
+    // Compara a senha inserida com a senha armazenada (hash)
+    const senhaOk = await bcrypt.compare(senha, user.password);
+
+    // Se a senha estiver errada
+    if (!senhaOk) {
+      return res.render('login', {
+        error: 'Usuário ou senha inválidos',
+        login
+      });
+    }
+
+    // Cria a sessão com as informações do usuário
+    req.session.user = {
+      id: user.id,
+      username: user.username,
+      role: user.role
+    };
+
+    // Redireciona conforme o papel do usuário
+    if (user.role === 'gerencia') {
+      return res.redirect('/gerencia'); // Página da gerência
+    }
+
+    // Redireciona para o painel do CPD
+    return res.redirect('/index');
+
+  } catch (err) {
+    console.error(err);
+    return res.render('login', {
+      error: 'Houve um erro ao tentar realizar o login. Tente novamente.',
+      login
+    });
+  }
+});
+
+// Logout
+router.get('/logout', (req, res) => {
+  req.session.destroy(() => {
+    res.redirect('/login'); // Redireciona para a página de login após o logout
+  });
+});
+
+module.exports = router;

@@ -1,0 +1,22 @@
+<nav class="navbar">
+  <a href="/">Início</a>
+
+  <% if (user && user.role === 'gerencia') { %>
+    <a href="/gerencia">Gerência</a>
+  <% } %>
+
+  <% if (user && user.role === 'cpd') { %>
+    <a href="/index">CPD</a>
+  <% } %>
+
+  <a href="/cadastro">Cadastro</a>
+  <a href="/prevencao">Prevenção</a>
+  <a href="/ecommerce">Ecommerce</a>
+
+  <% if (user) { %>
+    <span>Olá, <%= user.username %></span>
+    <a href="/auth/logout">Sair</a>
+  <% } else { %>
+    <a href="/login">Login</a>
+  <% } %>
+</nav>

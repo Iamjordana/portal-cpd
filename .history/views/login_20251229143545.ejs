@@ -1,0 +1,23 @@
+<form action="/auth/login" method="POST">
+  <label>Usuário</label>
+  <input
+    type="text"
+    name="username"
+    placeholder="Digite seu usuário"
+    required
+  >
+
+  <label>Senha</label>
+  <input
+    type="password"
+    name="password"
+    placeholder="Digite sua senha"
+    required
+  >
+
+  <button type="submit">Entrar</button>
+
+  <% if (typeof error !== 'undefined') { %>
+    <p style="color:red;"><%= error %></p>
+  <% } %>
+</form>

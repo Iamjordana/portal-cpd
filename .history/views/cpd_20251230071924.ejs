@@ -1,0 +1,9 @@
+<h1>Área do CPD</h1>
+<a href="/">Voltar</a>
+  <% if (user) { %>
+    <div class="user-info">
+      <span>Olá, <%= user.username %></span>
+      <a href="/auth/logout" class="logout-btn">Sair</a>
+    </div>
+  <% } %>
+</a>

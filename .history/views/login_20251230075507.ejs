@@ -1,0 +1,61 @@
+const express = require('express');
+const router = express.Router();
+const bcrypt = require('bcrypt');
+const db = require('../db');
+
+router.post('/login', async (req, res) => {
+  const { login, senha } = req.body;
+
+  if (!login || !senha) {
+    return res.render('login', {
+      error: 'Preencha usuário e senha',
+      login
+    });
+  }
+
+  const [rows] = await db.query(
+    'SELECT * FROM users WHERE username = ?',
+    [login]
+  );
+
+  if (rows.length === 0) {
+    return res.render('login', {
+      error: 'Usuário ou senha inválidos',
+      login
+    });
+  }
+
+  const user = rows[0];
+
+  const senhaOk = await bcrypt.compare(senha, user.password);
+
+  if (!senhaOk) {
+    return res.render('login', {
+      error: 'Usuário ou senha inválidos',
+      login
+    });
+  }
+
+  // 🔐 cria sessão
+  req.session.user = {
+    id: user.id,
+    username: user.username,
+    role: user.role
+  };
+
+  // 🔁 redireciona conforme perfil
+  if (user.role === 'gerencia') {
+    return res.redirect('/gerencia');
+  }
+
+  return res.redirect('/index');
+});
+
+// 🚪 Logout
+router.get('/logout', (req, res) => {
+  req.session.destroy(() => {
+    res.redirect('/');
+  });
+});
+
+module.exports = router;

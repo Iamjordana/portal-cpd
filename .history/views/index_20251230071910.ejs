@@ -1,0 +1,30 @@
+<nav class="navbar">
+  <button class="menu-toggle" aria-label="Abrir menu">☰</button>
+
+  <div class="menu">
+    <a href="/index">Início</a>
+
+    <% if (user && user.perfil === 'gerencia') { %>
+      <a href="/gerencia">Gerência</a>
+    <% } %>
+
+    <% if (user && user.perfil === 'cpd') { %>
+      <a href="/cpd">CPD</a>
+    <% } %>
+
+    <a href="/frentecaixa">Frente de Caixa</a>
+    <a href="/cadastro">Cadastro</a>
+    <a href="/prevencao">Prevenção e Perdas</a>
+    <a href="/ecommerce">Ecommerce</a>
+
+      <% if (user) { %>
+    <div class="user-info">
+      <span>Olá, <%= user.username %></span>
+      <a href="/auth/logout" class="logout-btn">Sair</a>
+    </div>
+  <% } %>
+
+</a>
+
+  </div>
+</nav>

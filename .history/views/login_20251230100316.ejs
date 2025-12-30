@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- O EJS renderiza este link para o seu arquivo CSS estático -->
+  <link rel="stylesheet" href="/css/style.css"> <link rel="shortcut icon" href="/imagens/favicon.ico.png" type="image/x-icon">
+  <title>Login - CPD 284</title>
+</head>
+<body>
+
+  <!-- CABEÇALHO LARANJA -->
+  <header class="header-login">
+    <h1 class="titulo-principal">CPD 284 - Atacadão</h1>
+    <p>Todos os links internos que você precisa em um só lugar</p>
+  </header>
+
+  <main class="main-login">
+    <!-- CONTAINER PRINCIPAL DO FORMULÁRIO -->
+    <div class="login-container">
+      <h2>Login do Sistema</h2>
+
+      <!-- Lógica EJS para exibir mensagem de erro, se houver -->
+      <% if (typeof error !== 'undefined' && error) { %>
+        <div class="error-message"><%= error %></div>
+      <% } %>
+
+      <form action="/auth/login" method="POST">
+        <label for="login">Usuário</label>
+        <input type="text" id="login" name="login" placeholder="Digite seu usuário" required>
+
+        <label for="senha">Senha</label>
+        <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
+
+        <button type="submit" class="btn-entrar">Entrar</button>
+      </form>
+    </div>
+  </main>
+
+  <!-- RODAPÉ VERDE -->
+  <footer class="footer-login">
+    <p>📧 Email: cpdaxiasdosul@atacadao.com.br</p>
+    <p>©Copy 2025/2026-CPD 284 • Desenvolvido por: Jordana Medeiros • Versão: 0.1</p>
+  </footer>
+
+</body>
+</html>
