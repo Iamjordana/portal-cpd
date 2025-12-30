@@ -4,13 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- CSS -->
-  <!-- ... -->
-  <link rel="stylesheet" href="static/css/style.css"> <!-- AGORA ESTÁ CORRETO -->
+<link rel="stylesheet" href="static/css/style.css"> <!-- AGORA ESTÁ CORRETO -->
   <link rel="shortcut icon" href="static/imagens/favicon.ico.png" type="image/x-icon">
-  <!-- ... -->
-  <title>Frente de Caixa</title>
+  <title>Prevenção e Perdas</title>
 </head>
+
 <body>
 
 <header class="header">
@@ -40,13 +38,12 @@
     <a href="/prevencao">Prevenção e Perdas</a>
     <a href="/ecommerce">Ecommerce</a>
 
-    
-    <!-- LOGIN / LOGOUT -->
-<% if (user) { %>
-  <a href="/auth/logout" class="logout-btn">Sair</a>
-<% } else { %>
-  <a href="/login">Login</a>
-<% } %>
+    <% if (user) { %>
+      <div class="user-info">
+        <span>Olá, <%= user.username %></span>
+        <a href="/auth/logout" class="logout-btn">Sair</a>
+      </div>
+    <% } %>
   </div>
 </nav>
 
@@ -81,6 +78,20 @@
       </a>
     </div>
 
+    <div class="card">
+      <img src="static/imagens/chaves.jpg" alt="prevchaves" class="card-img5">
+      <a href="https://srvsave142/prevperdas/#/chaves" target="_blank">
+        <button class="btn_atalho">Controle Prevenção</button>
+      </a>
+    </div>
+
+    <div class="card">
+      <img src="static/imagens/chaves.jpg" alt="prevconfinados" class="card-img5">
+      <a href="https://srvsave284/confinados/index.php?page=login" target="_blank">
+        <button class="btn_atalho">Confinados</button>
+      </a>
+    </div>
+
   </div>
 </main>
 
@@ -103,7 +114,7 @@
   </p>
 </footer>
 
-<!-- JS MENU -->
+<!-- JS DO MENU -->
 <script src="/js/menu.js"></script>
 
 </body>

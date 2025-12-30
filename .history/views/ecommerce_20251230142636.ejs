@@ -5,11 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- CSS -->
-  <!-- ... -->
   <link rel="stylesheet" href="static/css/style.css"> <!-- AGORA ESTÁ CORRETO -->
   <link rel="shortcut icon" href="static/imagens/favicon.ico.png" type="image/x-icon">
   <!-- ... -->
-  <title>Frente de Caixa</title>
+</head>
+
+  <title>Ecommerce</title>
 </head>
 <body>
 
@@ -39,8 +40,6 @@
     <a href="/cadastro">Cadastro</a>
     <a href="/prevencao">Prevenção e Perdas</a>
     <a href="/ecommerce">Ecommerce</a>
-
-    
     <!-- LOGIN / LOGOUT -->
 <% if (user) { %>
   <a href="/auth/logout" class="logout-btn">Sair</a>
@@ -81,6 +80,20 @@
       </a>
     </div>
 
+    <div class="card">
+      <img src="static/imagens/ifood.jpg" alt="Ifood" class="card-img5">
+      <a href="https://portal.ifood.com.br/" target="_blank">
+        <button class="btn_atalho">Portal Ifood</button>
+      </a>
+    </div>
+
+    <div class="card">
+      <img src="static/imagens/separador.png" alt="Separador Ifood" class="card-img6">
+      <a href="https://separador.ifood.com.br/" target="_blank">
+        <button class="btn_atalho">Separador Ifood</button>
+      </a>
+    </div>
+
   </div>
 </main>
 
@@ -99,7 +112,7 @@
   <p>
     ©Copy 2025/2026 – CPD 284 • Desenvolvido por:
     <a href="https://github.com/Iamjordana" target="_blank">Jordana Medeiros</a>
-    • Versão: 1.0
+    • Versão:1.0
   </p>
 </footer>
 
