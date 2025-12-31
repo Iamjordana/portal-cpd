@@ -1,0 +1,8 @@
+- aba irregularidades rh
+- aba rh
+- acesso por login para todos os setores
+- add link notas gerencia
+- add planilha cadastro
+- add atalho controle gerencial pro cpd e gerencia
+- add rotina batch
+

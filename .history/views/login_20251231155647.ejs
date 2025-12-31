@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Login - CPD 284</title>
+
+  <link rel="stylesheet" href="/static/css/style.css">
+  <link rel="shortcut icon" href="/static/imagens/favicon.ico.png" type="image/x-icon">
+</head>
+
+<body class="body-login-page">
+
+<header class="header-login">
+  <div class="header-login-conteudo">
+    <div class="header-login-texto">
+      <h1 class="titulo-principal">CPD 284 - Atacadão</h1>
+      <p>Todos os links internos que você precisa em um só lugar!</p>
+    </div>
+    <div class="header-login-imagem">
+      <img src="/static/imagens/logoataca.jpg" alt="Atacadão">
+    </div>
+  </div>
+</header>
+
+<main class="main-login">
+  <div class="login-container-card">
+    <h2>Login do Sistema</h2>
+
+    <% if (error) { %>
+      <div class="error-message"><%= error %></div>
+    <% } %>
+
+    <form action="/auth/login" method="POST">
+      <label for="login">Usuário</label>
+      <input type="text" id="login" name="login" required>
+
+      <label for="senha">Senha</label>
+      <input type="password" id="senha" name="senha" required>
+
+      <div class="btn-login">
+        <button type="submit" class="btn-entrar">Entrar</button>
+        <a href="/" class="btn-voltar">Voltar ao menu</a>
+      </div>
+    </form>
+  </div>
+</main>
+
+<footer class="footer">
+  ...
+</footer>
+
+<script src="/static/js/menu.js"></script>
+</body>
+</html>
