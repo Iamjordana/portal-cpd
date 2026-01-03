@@ -1,0 +1,7 @@
+<% if (avisosAtivos && avisosAtivos.length > 0) { %>
+  <div class="aviso-global">
+    <% avisosAtivos.forEach(aviso => { %>
+      <span>⚠️ <%= aviso.mensagem %></span>
+    <% }) %>
+  </div>
+<% } %>

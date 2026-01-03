@@ -1,0 +1,8 @@
+<% if (avisosAtivos && avisosAtivos.length > 0) { %>
+  <div class="aviso-global">
+    <span class="aviso-icon">⚠️</span>
+    <span class="aviso-texto">
+      <%= avisosAtivos[0].mensagem %>
+    </span>
+  </div>
+<% } %>

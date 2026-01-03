@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Painel CPD - Aviso</title>
+  <link rel="stylesheet" href="/static/styles.css"> <!-- opcional -->
+  <style>
+    body { font-family: Arial, sans-serif; padding: 2rem; }
+    label { display: block; margin-top: 1rem; }
+    input[type="text"] { width: 100%; padding: 0.5rem; }
+    button { margin-top: 1rem; padding: 0.5rem 1rem; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <h1>Painel CPD - Aviso</h1>
+
+  <form action="/cpd/painel" method="POST">
+    <label for="texto">Aviso:</label>
+    <input type="text" id="texto" name="texto" value="<%= aviso ? aviso.texto : '' %>" required>
+
+    <label for="ativo">
+      <input type="checkbox" id="ativo" name="ativo" <%= aviso && aviso.ativo ? 'checked' : '' %>>
+      Ativo
+    </label>
+
+    <button type="submit">Salvar</button>
+  </form>
+</body>
+</html>

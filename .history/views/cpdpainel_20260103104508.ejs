@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Painel de Avisos - CPD</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+<main>
+  <h2 style="text-align:center; color:#2e7d32; margin-bottom:20px;">
+    Painel de Avisos CPD
+  </h2>
+
+  <table class="tabela-avisos">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Mensagem</th>
+        <th>Status</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+<tbody>
+  <% avisos.forEach(aviso => { %>
+    <tr class="<%= aviso.ativo ? 'active' : 'inactive' %>">
+      <td><%= aviso.id %></td>
+      <td><%= aviso.mensagem %></td>
+      <td><%= aviso.ativo ? 'Ativo' : 'Inativo' %></td>
+      <td>
+        <form action="/cpd/toggle/<%= aviso.id %>" method="POST">
+          <button type="submit">
+            <%= aviso.ativo ? 'Desativar' : 'Ativar' %>
+          </button>
+        </form>
+
+        <form action="/cpd/deletar/<%= aviso.id %>" method="POST">
+          <button type="submit">Deletar</button>
+        </form>
+      </td>
+    </tr>
+  <% }) %>
+</tbody>
+
+  </table>
+
+  <hr style="margin:30px 0;">
+
+  <h3>Criar novo aviso</h3>
+
+  <form action="/cpd/novo" method="POST">
+    <input type="text" name="texto" placeholder="Digite o aviso..." required>
+    <label>
+      <input type="checkbox" name="ativo" checked> Ativo
+    </label>
+    <button class="btn_atalho">Criar Aviso</button>
+  </form>
+
+</main>
+
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Painel de Avisos - CPD</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+
+  <main class="painel-container">
+
+    <h1>Painel de Avisos – CPD</h1>
+
+    <!-- FORMULÁRIO NOVO AVISO -->
+    <section class="form-aviso">
+      <h2>Criar novo aviso</h2>
+
+      <form action="/cpd/novo" method="POST">
+        <label for="texto">Texto do aviso</label>
+        <input
+          type="text"
+          id="texto"
+          name="texto"
+          placeholder="Digite o aviso que aparecerá para todos"
+          required
+        >
+
+        <label>
+          <input type="checkbox" name="ativo" checked>
+          Ativo
+        </label>
+
+        <button type="submit">Criar Aviso</button>
+      </form>
+    </section>
+
+    <!-- TABELA DE AVISOS -->
+    <table class="table-avisos">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Texto</th>
+          <th>Status</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% if (avisos && avisos.length > 0) { %>
+          <% avisos.forEach(aviso => { %>
+            <tr>
+              <td><%= aviso.id %></td>
+              <td><%= aviso.texto %></td>
+              <td>
+                <%= aviso.ativo ? 'Ativo' : 'Inativo' %>
+              </td>
+              <td>
+
+                <!-- ATIVAR / DESATIVAR -->
+                <form
+                  action="/cpd/toggle/<%= aviso.id %>"
+                  method="POST"
+                  style="display:inline-block;"
+                >
+                  <button type="submit" class="btn btn-toggle">
+                    <%= aviso.ativo ? 'Desativar' : 'Ativar' %>
+                  </button>
+                </form>
+
+                <!-- DELETAR -->
+                <form
+                  action="/cpd/deletar/<%= aviso.id %>"
+                  method="POST"
+                  style="display:inline-block;"
+                >
+                  <button type="submit" class="btn btn-delete">
+                    Deletar
+                  </button>
+                </form>
+
+              </td>
+            </tr>
+          <% }) %>
+        <% } else { %>
+          <tr>
+            <td colspan="4">Nenhum aviso cadastrado</td>
+          </tr>
+        <% } %>
+      </tbody>
+    </table>
+
+  </main>
+
+</body>
+</html>

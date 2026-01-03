@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="/static/css/style.css">
+  <link rel="shortcut icon" href="/static/imagens/favicon.ico.png" type="image/x-icon">
+
+  <title>Portal Atalhos CPD 284</title>
+</head>
+<body>
+
+<header class="header">
+  <div class="header-conteudo">
+    <div class="header-texto">
+      <h1 class="titulo-principal">CPD 284 - Atacadão</h1>
+      <p>Todos os links internos que você precisa em um só lugar!</p>
+    </div>
+
+    <div class="header-imagem">
+      <img src="/static/imagens/logoataca.jpg" alt="Atacadão">
+    </div>
+  </div>
+</header>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <button class="menu-toggle" aria-label="Abrir menu">☰</button>
+  <div class="menu">
+    <a href="/">Início</a>
+
+    <!-- GERÊNCIA -->
+    <% if (user && user.role === 'gerencia') { %>
+      <a href="/gerencia">Gerência</a>
+    <% } else { %>
+      <a href="/login">Gerência</a>
+    <% } %>
+
+    <!-- CPD -->
+    <% if (user && user.role === 'cpd') { %>
+      <a href="/index">CPD</a>
+    <% } else { %>
+      <a href="/login">CPD</a>
+    <% } %>
+
+    <a href="/frentecaixa">Frente de Caixa</a>
+    <a href="/cadastro">Cadastro</a>
+    <a href="/prevencao">Prevenção e Perdas</a>
+    <a href="/ecommerce">Ecommerce</a>
+
+    <!-- LOGIN / LOGOUT -->
+    <% if (user) { %>
+      <a href="/auth/logout" class="logout-btn">Sair</a>
+    <% } else { %>
+      <a href="/login">Login</a>
+    <% } %>
+  </div>
+</nav>
+
+    <main>
+        <div class="container">
+            <div class="card">
+                <img src="/static/imagens/atacadao.png" alt="ATACADAO" class="card-img1">
+                <a href="https://srvportal-prod.br-atacadao.corp/portal/" target="_blank"><button class="btn_atalho">Portal Atacadão</button></a>
+            </div>
+
+            <div class="card">
+                <img src="/static/imagens/RUB2.png" alt="RUB" class="card-img2">
+                <a href="https://srvuca284/vue/" target="_blank"><button class="btn_atalho">RUB</button></a>
+            </div>
+
+            <div class="card">
+                <img src="/static/imagens/SAVE2.png" alt="SAVEWEB" class="card-img3">
+                <a href="https://srvapp284.br-atacadao.corp/" target="_blank" ><button class="btn_atalho">SaveWeb</button></a>
+            </div>   
+
+            <div class="card">
+                <img src="/static/imagens/LUNIX.png" alt="TPLINUX" class="card-img4">
+                <a href="https://srvtpl284.br-atacadao.corp:8080/" target="_blank"><button class="btn_atalho">TPLinux</button></a>
+            </div>
+                        <div class="card">
+                <img src="/static/imagens/gestaotpl.png" alt="GESTAOTPL" class="card-img4">
+                <a href="https://srvtpl284.br-atacadao.corp:8080/" target="_blank"><button class="btn_atalho">Gestão TPLINUX</button></a>
+            </div>
+            <div class="card">
+                <img src="/static/imagens/nfe.jpg" alt="nfe" class="card-img7">
+                <a href="https://nfe.portal.br-atacadao.corp/NFe_GDeWeb_AD/saidas.aspx" target="_blank"><button class="btn_atalho">Triangulus NFE</button></a>
+            </div>
+
+        <div class="card">
+            <img src="/static/imagens/nfce.jpg" alt="nfe" class="card-img7">
+            <a href="https://nfe.portal.br-atacadao.corp/GDeWeb_NFCe_AD/saidas.aspx" target="_blank"><button class="btn_atalho">Triangulus CUPOM</button></a>
+        </div>
+
+            <div class="card">
+                <img src="/static/imagens/tagsell.png" alt="tegsell" class="card-img5">
+                <a href="https://app.tagsell.com.br/login" target="_blank"><button class="btn_atalho">TegSell</button></a>
+            </div>
+
+            <div class="card">
+                <img src="/static/imagens/TELEOFERTAS.png" alt="TELEOFERTAS" class="card-img6">
+                <a href="http://srvsistflyer.cloud.br-atacadao.corp/teleofertas/" target="_blank"><button class="btn_atalho">TeleOfertas</button></a>
+            </div>
+
+            <div class="card">
+                <img src="/static/imagens/chamados.png" alt="chamados" class="card-img7">
+                <a href="https://csc.br-atacadao.corp/portal/customer.html?RequestedURL=" target="_blank"><button class="btn_atalho">CSC Chamados</button></a>
+            </div>
+            <div class="card">
+                <img src="/static/imagens/chamados.png" alt="chamados" class="card-img7">
+                <a href="https://csc.br-atacadao.corp/otrs/index.pl" target="_blank"><button class="btn_atalho">CSC Agente</button></a>
+            </div>      
+
+            <div class="card">
+                <img src="/static/imagens/ibm.jpg" alt="ibm" class="card-img8">
+                <a href="https://ibmsvg.br-atacadao.corp:9443/itim/console/jsp/logon/Login.jsp" target="_blank"><button class="btn_atalho">IAM</button></a>
+            </div>  
+
+            <div class="card">
+                <img src="/static/imagens/chaves.jpg" alt="prevchaves" class="card-img9">
+                <a href="https://srvsave142/prevperdas/#/chaves" target="_blank"><button class="btn_atalho">Controle Prevenção</button></a>
+            </div> 
+            
+            <div class="card">
+                <img src="/static/imagens/controleg.png" alt="controlegeren" class="card-img10">
+                <a href="https://docs.google.com/spreadsheets/d/1qIYmTfEgEyFtCI4ynK57EcwgX6iaSKgUFGssNHVbir8/edit?gid=0#gid=0" target="_blank"><button class="btn_atalho">Controle Gerencial</button></a>
+            </div> 
+
+            <div class="card">
+                <img src="/static/imagens/uber.png" alt="uber" class="card-img10">
+                <a href="https://auth.uber.com/" target="_blank"><button class="btn_atalho">Agendar Uber</button></a>
+            </div>
+                   <div class="card">
+                <img src="/static/imagens/install.jpg" alt="install " class="card-img14">
+                <a href="https://install.portal.br-atacadao.corp/" target="_blank"><button class="btn_atalho">Portal Install</button></a>
+            </div> 
+                                                 
+            <div class="card">
+                <img src="/static/imagens/sitef.png" alt="sitef" class="card-img15">
+                <a href="https://sitef1.softwareexpress.com.br/sitefweb/pages/inicial.zeus" target="_blank"><button class="btn_atalho">SiTeF</button></a>
+            </div> 
+                                                            
+            <div class="card">
+                <img src="/static/imagens/grafana.png" alt="grafana" class="card-img16">
+                <a href="https://grafana.br-atacadao.corp/login" target="_blank"><button class="btn_atalho">Painel Grafana</button></a>
+            </div> 
+            
+
+            <div class="card">
+                <img src="/static/imagens/painelaviso.png" alt="Painel Avisos" class="card-img11">
+<% if (user && user.role === 'cpd') { %>
+  <a href="/cpd/painel">
+    <button class="btn_atalho">Painel Avisos</button>
+  </a>
+<% } %>
+            </div>
+
+            
+        </div>
+
+    </main>
+   
+    
+  </div>
+</main>
+
+<footer class="footer">
+  <p class="linha-email">
+    📧 Email:
+    <a href="mailto:cpdcaxiasdosul@atacadao.com.br">cpdcaxiasdosul@atacadao.com.br</a>
+    <span class="logo-animada">
+      <img src="/static/imagens/logocpd284.png" alt="Logo CPD 284">
+    </span>
+  </p>
+
+  <p>
+    ©Copy 2025/2026 – CPD 284 • Desenvolvido por:
+    <a href="https://github.com/Iamjordana" target="_blank">Jordana Medeiros</a> • Versão: 1.0
+  </p>
+</footer>
+
+<script src="/js/menu.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Painel CPD</title>
+
+  <!-- CSS GLOBAL -->
+  <link rel="stylesheet" href="/static/css/style.css">
+
+  <link rel="shortcut icon" href="/static/imagens/favicon.ico.png" type="image/x-icon">
+</head>
+
+<body>
+
+  <!-- AVISO GLOBAL -->
+  <% if (avisosAtivos && avisosAtivos.length > 0) { %>
+    <div class="aviso-global">
+      <span class="aviso-icon">⚠️</span>
+      <span class="aviso-texto">
+        <%= avisosAtivos[0].mensagem %>
+      </span>
+    </div>
+  <% } %>
+
+  <main class="painel-container">
+
+    <h1>Painel CPD</h1>
+
+    <!-- FORMULÁRIO -->
+    <section class="form-aviso">
+      <h2>Novo Aviso</h2>
+
+      <form action="/cpd/novo" method="POST">
+        <label>Mensagem</label>
+        <input type="text" name="mensagem" required>
+
+        <button type="submit">Criar Aviso</button>
+      </form>
+    </section>
+
+    <!-- TABELA -->
+    <table class="table-avisos">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Mensagem</th>
+          <th>Status</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% avisos.forEach(aviso => { %>
+          <tr>
+            <td><%= aviso.id %></td>
+            <td><%= aviso.mensagem %></td>
+            <td><%= aviso.ativo ? 'Ativo' : 'Inativo' %></td>
+            <td>
+              <form action="/cpd/toggle/<%= aviso.id %>" method="POST" style="display:inline;">
+                <button class="btn btn-toggle">
+                  <%= aviso.ativo ? 'Desativar' : 'Ativar' %>
+                </button>
+              </form>
+
+              <form action="/cpd/deletar/<%= aviso.id %>" method="POST" style="display:inline;">
+                <button class="btn btn-delete">Excluir</button>
+              </form>
+            </td>
+          </tr>
+        <% }) %>
+      </tbody>
+    </table>
+    
+        <div class="btn-login">
+          <button type="submit" class="btn-entrar">Entrar</button>
+          <a href="/"class="btn-voltar">Voltar ao menu</a>
+        </div>
+  </main>
+
+</body>
+</html>

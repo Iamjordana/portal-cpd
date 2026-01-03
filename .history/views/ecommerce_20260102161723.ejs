@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Ecommerce</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/static/css/style.css">
+  <link rel="shortcut icon" href="/static/imagens/favicon.ico.png" type="image/x-icon">
+</head>
+
+<header class="header">
+  <div class="header-conteudo">
+
+    <div class="header-texto">
+      <h1 class="titulo-principal">CPD 284 - Atacadão</h1>
+      <p>Todos os links internos que você precisa em um só lugar!</p>
+    </div>
+
+    <div class="header-imagem">
+      <img src="/static/imagens/logoataca.jpg" alt="Atacadão">
+    </div>
+
+  </div>
+</header>
+
+<nav class="navbar">
+  <button class="menu-toggle" aria-label="Abrir menu">☰</button>
+
+  <div class="menu">
+    <a href="/">Início</a>
+    <a href="/gerencia">Gerência</a>
+    <a href="/index">CPD</a>
+    <a href="/frentecaixa">Frente de Caixa</a>
+    <a href="/cadastro">Cadastro</a>
+    <a href="/prevencao">Prevenção e Perdas</a>
+    <a href="/ecommerce">Ecommerce</a>
+    
+    <!-- LOGIN / LOGOUT -->
+<% if (user) { %>
+  <a href="/auth/logout" class="logout-btn">Sair</a>
+<% } else { %>
+  <a href="/login">Login</a>
+<% } %>
+  </div>
+</nav>
+
+<main>
+  <div class="container">
+    <div class="card">
+      <img src="/static/imagens/SAVE2.png" alt="SAVEWEB" class="card-img3">
+      <a href="https://srvapp284.br-atacadao.corp/" target="_blank">
+        <button class="btn_atalho">SaveWeb</button>
+      </a>
+    </div>
+
+    <div class="card">
+      <img src="/static/imagens/ifood.jpg" alt="Ifood" class="card-img5">
+      <a href="https://portal.ifood.com.br/" target="_blank">
+        <button class="btn_atalho">Portal Ifood</button>
+      </a>
+    </div>
+
+    <div class="card">
+      <img src="/static/imagens/separador.png" alt="Separador Ifood" class="card-img6">
+      <a href="https://separador.ifood.com.br/" target="_blank">
+        <button class="btn_atalho">Separador Ifood</button>
+      </a>
+    </div>
+    
+    <div class="card">
+        <img src="/static/imagens/nfe.jpg" alt="nfe" class="card-img7">
+        <a href="https://nfe.portal.br-atacadao.corp/NFe_GDeWeb_AD/saidas.aspx" target="_blank"><button class="btn_atalho">Triangulus NFE</button></a>
+    </div>
+
+  </div>
+</main>
+
+<footer class="footer">
+  <p class="linha-email">
+    📧 Email:
+    <a href="mailto:cpdcaxiasdosul@atacadao.com.br">
+      cpdcaxiasdosul@atacadao.com.br
+    </a>
+
+    <span class="logo-animada">
+      <img src="/static/imagens/logocpd284.png" alt="Logo CPD 284">
+    </span>
+  </p>
+
+  <p>
+    ©Copy 2025/2026 – CPD 284 • Desenvolvido por:
+    <a href="https://github.com/Iamjordana" target="_blank">Jordana Medeiros</a>
+    • Versão:1.0
+  </p>
+</footer>
+
+<!-- JS MENU -->
+<script src="/static/js/menu.js"></script>
+
+</body>
+</html>

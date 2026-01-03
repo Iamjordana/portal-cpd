@@ -1,0 +1,9 @@
+<form action="/cpd/painel" method="POST">
+  <label>Aviso:</label>
+  <input type="text" name="texto" value="<%= aviso ? aviso.texto : '' %>" required>
+
+  <label>Ativo?</label>
+  <input type="checkbox" name="ativo" <%= aviso && aviso.ativo ? 'checked' : '' %>>
+
+  <button type="submit">Salvar</button>
+</form>
