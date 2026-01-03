@@ -5,4 +5,20 @@
 - add planilha cadastro
 - add atalho controle gerencial pro cpd e gerencia
 - add rotina batch
+- cpd
+ Tecnoset
+ Uber
+ - aba de informativo (lançar avisos como SAVEWEB CAIU)
+- melhorar o visual
+- logout por tempo expirado
+1️⃣ Área de avisos CPD (concluída)
+2️⃣ Log de acessos (quem entrou / quando)
+3️⃣ Página “Status dos Sistemas”
+4️⃣ Permissões mais granulares por link
+ no próximo passo eu:
 
+Crio o painel do CPD para gerenciar avisos
+
+Ou deixo o banner com cores diferentes por tipo
+
+Ou já conecto isso ao seu menu existente

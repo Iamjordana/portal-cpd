@@ -56,7 +56,7 @@
             <td><%= aviso.ativo ? 'Ativo' : 'Inativo' %></td>
             <td>
               <form action="/cpd/toggle/<%= aviso.id %>" method="POST" style="display:inline;">
-                <button class="btn btn-toggle">
+                <button class="btn-toggle">
                   <%= aviso.ativo ? 'Desativar' : 'Ativar' %>
                 </button>
               </form>
@@ -70,7 +70,7 @@
       </tbody>
     </table>
 
-        <div class=" btn btn-login">
+        <div class="btn-login">
           <a href="/index" class="btn-voltar">Voltar ao cpd</a>
         </div>
 
