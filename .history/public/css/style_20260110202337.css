@@ -1,0 +1,495 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&display=swap');
+
+/* =====================================================
+   1. VARIÁVEIS – DESIGN SYSTEM
+===================================================== */
+:root {
+  --branco: #ffffff;
+  --cinza-bg: #f4f6f5;
+
+  --verde-claro: #43a047;
+  --verde-escuro: #2e7d32;
+
+  --laranja: #ff9800;
+  --laranja-escuro: #f57c00;
+
+  --texto: #444;
+  --texto-suave: #777;
+
+  --sombra-suave: 0 4px 12px rgba(0,0,0,0.12);
+  --sombra-media: 0 8px 20px rgba(0,0,0,0.18);
+  --sombra-forte: 0 14px 30px rgba(0,0,0,0.25);
+}
+
+/* =====================================================
+   2. RESET E BASE
+===================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background: var(--cinza-bg);
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--texto);
+  display: flex;
+  flex-direction: column;
+}
+
+/* =====================================================
+   3. HEADER
+===================================================== */
+.header {
+  background: linear-gradient(180deg, #ffffff 0%, #f6f6f6 100%);
+  box-shadow: var(--sombra-suave);
+}
+
+.header-conteudo {
+  max-width: 1200px;
+  margin: auto;
+  padding: 28px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.header-logo {
+  width: 90px;
+}
+
+.header-texto {
+  flex: 1;
+  text-align: center;
+}
+
+.titulo-principal {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.8rem;
+  font-weight: 800;
+}
+
+.titulo-verde { color: var(--verde-escuro); }
+.titulo-laranja { color: var(--laranja); }
+
+.header-texto p {
+  margin-top: 6px;
+  font-size: 0.75rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--texto-suave);
+}
+
+/* =====================================================
+   4. NAVBAR
+===================================================== */
+.navbar {
+  background: linear-gradient(90deg, var(--verde-escuro), var(--verde-claro));
+  box-shadow: var(--sombra-media);
+}
+
+.menu {
+  max-width: 1200px;
+  margin: auto;
+  padding: 12px 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 10px 18px;
+  position: relative;
+}
+
+.menu a:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 18px;
+  width: 1px;
+  background: rgba(255,255,255,0.4);
+}
+
+.menu a:hover {
+  background: white;
+  color: var(--verde-escuro);
+  border-radius: 8px;
+}
+
+/* =====================================================
+   5. MAIN / GRID FLUIDO
+===================================================== */
+main {
+  flex: 1;
+  margin: 50px auto;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 32px;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+/* =====================================================
+   6. CARDS
+===================================================== */
+.card {
+  width: 100%;
+  max-width: 260px;
+  min-height: 250px;
+  margin: auto;
+
+  background: white;
+  border-radius: 18px;
+  padding: 22px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  box-shadow: var(--sombra-media);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--sombra-forte);
+}
+
+.card img {
+  width: 96px;
+  height: 96px;
+  object-fit: contain;
+}
+
+.btn_atalho {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  background: linear-gradient(135deg, var(--verde-claro), var(--verde-escuro));
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn_atalho:hover {
+  background: linear-gradient(135deg, var(--laranja), var(--laranja-escuro));
+}
+
+/* =====================================================
+   7. LOGIN
+===================================================== */
+.main-login {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 16px;
+}
+
+.login-container-card {
+  width: 100%;
+  max-width: 420px;
+  padding: 36px;
+  background: white;
+  border-radius: 18px;
+  box-shadow: var(--sombra-media);
+  text-align: center;
+  animation: fadeSlideUp 0.6s ease-out;
+}
+
+/* =====================================================
+   8. AVISOS
+===================================================== */
+.aviso-ativo {
+  background: linear-gradient(135deg, #fff8e1, #ffecb3);
+  border-left: 6px solid var(--laranja);
+  padding: 12px 16px;
+  border-radius: 10px;
+  font-weight: 600;
+  box-shadow: var(--sombra-suave);
+}
+
+.aviso-global {
+  width: 100%;
+  padding: 14px 24px;
+  background: linear-gradient(135deg, #fff8e1, #ffecb3);
+  color: #000;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  box-shadow: var(--sombra-media);
+}
+
+/* =====================================================
+   9. BOTÕES DE AÇÃO
+===================================================== */
+.btn {
+  padding: 7px 16px;
+  border-radius: 20px;
+  border: none;
+  font-size: 13px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.15s, opacity 0.15s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.95;
+}
+
+.btn-ativar {
+  background: linear-gradient(135deg, #43a047, #2e7d32);
+  color: white;
+}
+
+.btn-desativar {
+  background: linear-gradient(135deg, #81c784, #4caf50);
+  color: white;
+}
+
+.btn-excluir {
+  background: linear-gradient(135deg, #e53935, #c62828);
+  color: white;
+}
+
+/* =====================================================
+   10. FOOTER
+===================================================== */
+.footer {
+  background: linear-gradient(90deg, var(--verde-escuro), var(--verde-claro));
+  color: white;
+  text-align: center;
+  padding: 18px 12px;
+}
+
+/* =====================================================
+   11. ANIMAÇÕES
+===================================================== */
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =====================================================
+   TABELA DE AVISOS – COMPLETA
+===================================================== */
+
+.table-avisos {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: var(--sombra-suave);
+  margin-top: 25px;
+}
+
+.table-avisos th {
+  background: var(--verde-escuro);
+  color: white;
+  padding: 14px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.table-avisos td {
+  padding: 14px;
+  text-align: center;
+  font-size: 14px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.table-avisos tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+.table-avisos tr:hover {
+  background: #f1f5f9;
+}
+
+/* =====================================================
+   BADGES DE STATUS
+===================================================== */
+
+.badge-ativo {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 14px;
+  font-size: 12px;
+  font-weight: bold;
+  background: linear-gradient(135deg, #43a047, #2e7d32);
+  color: white;
+}
+
+.badge-inativo {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 14px;
+  font-size: 12px;
+  font-weight: bold;
+  background: #bdbdbd;
+  color: #333;
+}
+
+/* =====================================================
+   BOTÕES ESPECÍFICOS CPD
+===================================================== */
+
+.btn-voltar,
+.btn-entrar {
+  background-color: var(--verde-escuro);
+  color: white;
+  padding: 8px 18px;
+  border-radius: 22px;
+  font-size: 13px;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  transition: 0.2s;
+}
+
+.btn-voltar:hover,
+.btn-entrar:hover {
+  background-color: #256528;
+  transform: translateY(-2px);
+}
+
+/* =====================================================
+   HEADER LOGIN (COMPLETO)
+===================================================== */
+
+.header-login {
+  background: linear-gradient(90deg, var(--verde-escuro), var(--verde-claro));
+  color: white;
+  padding: 22px 20px;
+  box-shadow: var(--sombra-media);
+}
+
+.header-login-conteudo {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.header-login-texto {
+  flex: 1;
+  text-align: center;
+}
+
+.titulo-principal-login {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.6rem;
+  font-weight: 800;
+}
+
+.titulo-login-branco { color: #fff; }
+.titulo-login-laranja { color: var(--laranja); }
+
+/* =====================================================
+   FOOTER CPD (COM ANIMAÇÃO)
+===================================================== */
+
+.footer {
+  background: linear-gradient(90deg, var(--verde-escuro), var(--verde-claro));
+  color: white;
+  text-align: center;
+  padding: 18px 12px;
+}
+
+.footer a {
+  color: #ffeb3b;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.linha-email {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.logo-animada {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: var(--sombra-media);
+  animation: respirar 4s infinite ease-in-out;
+}
+
+.logo-animada img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@keyframes respirar {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+/* =====================================================
+   RESPONSIVO – TABELA
+===================================================== */
+
+@media (max-width: 768px) {
+  .table-avisos thead {
+    display: none;
+  }
+
+  .table-avisos tr {
+    display: block;
+    margin-bottom: 18px;
+    border-radius: 12px;
+    box-shadow: var(--sombra-suave);
+  }
+
+  .table-avisos td {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+  }
+
+  .table-avisos td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    color: var(--texto-suave);
+  }
+}
